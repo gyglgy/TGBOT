@@ -4,7 +4,6 @@ from dotenv import load_dotenv, set_key
 import asyncio
 import random
 import os
-import datetime
 
 # Настраиваем логирование
 logging.basicConfig(
@@ -35,12 +34,6 @@ client = TelegramClient(
     device_model='PC',  # Модель устройства
     app_version='7.2.1'  # Версия приложения
 )
-
-def generate_random_series():
-    """Генерирует случайную серию для текущей даты."""
-    today = datetime.datetime.now().strftime('%Y%m%d')
-    random_number = random.randint(1000, 9999)
-    return f"{today}-{random_number}"
 
 async def delete_previous_message(channel, previous_message_id):
     """Удаляет предыдущее сообщение по его ID."""
@@ -77,13 +70,9 @@ async def main():
                 message_text = random_video.text or ""
                 logging.info(f"Текст сообщения: {message_text}")
 
-                # Генерируем случайную серию
-                random_series = generate_random_series()
-                logging.info(f"Случайная серия: {random_series}")
-
                 # Формируем тексты для двух сообщений
-                new_message_text_one = f"{message_text}\n\nСлучайная серия на сегодня\n\n[Наш другой канал с фильмами и сериалами](https://t.me/apelsinovypodval)"
-                new_message_text_two = f"{message_text}\n\nСлучайная серия на сегодня\n\n[Все серии южного парка](https://t.me/southsparkvse)"
+                new_message_text_two = f"{message_text}\n\nСлучайная серия на сегодня\n\n[Наш другой канал с фильмами и сериалами](https://t.me/apelsinovypodval)"
+                new_message_text_one = f"{message_text}\n\nСлучайная серия на сегодня\n\n[Все серии южного парка](https://t.me/southsparkvse)"
 
                 # Отправляем сообщение в первый канал и удаляем предыдущее
                 await delete_previous_message(channels[0], previous_message_id_channel_one)
