@@ -1,0 +1,4599 @@
+2024-09-10 21:37:42,136 - INFO - Start creating a new auth key on DC2
+2024-09-10 21:37:42,137 - INFO - Connecting...
+2024-09-10 21:37:42,139 - INFO - Connected! Production DC2 - IPv4
+2024-09-10 21:37:42,140 - DEBUG - Send req_pq: 112484180287776752663857216442724091543
+2024-09-10 21:37:42,374 - DEBUG - Got ResPq: -112095308080373736401140524991692463728
+2024-09-10 21:37:42,374 - DEBUG - Server public key fingerprints: [
+    847625836280919973,
+    -4344800451088585951,
+    -3414540481677951611
+]
+2024-09-10 21:37:42,374 - DEBUG - Using fingerprint: 847625836280919973
+2024-09-10 21:37:42,374 - DEBUG - Start PQ factorization: 3500153964690397129
+2024-09-10 21:37:42,532 - DEBUG - Done PQ factorization (0.154s): 1789005677 1956480077
+2024-09-10 21:37:42,533 - DEBUG - Done encrypt data with RSA
+2024-09-10 21:37:42,533 - DEBUG - Send req_DH_params
+2024-09-10 21:37:43,105 - DEBUG - Done decrypting answer
+2024-09-10 21:37:43,106 - DEBUG - Delta time: -0.106
+2024-09-10 21:37:43,132 - DEBUG - Send set_client_DH_params
+2024-09-10 21:37:43,704 - DEBUG - DH parameters check: OK
+2024-09-10 21:37:43,704 - DEBUG - g_a and g_b validation: OK
+2024-09-10 21:37:43,704 - DEBUG - SHA1 hash values check: OK
+2024-09-10 21:37:43,705 - DEBUG - Nonce fields check: OK
+2024-09-10 21:37:43,705 - DEBUG - Server salt: 10987918429868903606
+2024-09-10 21:37:43,705 - INFO - Done auth key exchange: DhGenOk
+2024-09-10 21:37:43,706 - INFO - Disconnected
+2024-09-10 21:37:43,770 - INFO - Connecting...
+2024-09-10 21:37:43,770 - INFO - Connected! Production DC2 - IPv4
+2024-09-10 21:37:43,771 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085476694786052,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:37:43,773 - INFO - NetworkTask started
+2024-09-10 21:37:43,930 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085480491699201,
+    "seq_no": 0,
+    "length": 28,
+    "body": {
+        "_": "types.BadServerSalt",
+        "bad_msg_id": 7413085476694786052,
+        "bad_msg_seqno": 0,
+        "error_code": 48,
+        "new_server_salt": -7458825643840648010
+    }
+}
+2024-09-10 21:37:43,931 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085476694786056,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:37:44,012 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085480834835465,
+    "seq_no": 2,
+    "length": 88,
+    "body": {
+        "_": "MsgContainer",
+        "messages": [
+            {
+                "_": "Message",
+                "msg_id": 7413085480834835457,
+                "seq_no": 1,
+                "length": 28,
+                "body": {
+                    "_": "types.NewSessionCreated",
+                    "first_msg_id": 7413085476694786056,
+                    "unique_id": 6125707660337991866,
+                    "server_salt": -7458825643840648010
+                }
+            },
+            {
+                "_": "Message",
+                "msg_id": 7413085480834835461,
+                "seq_no": 2,
+                "length": 20,
+                "body": {
+                    "_": "types.Pong",
+                    "msg_id": 7413085476694786056,
+                    "ping_id": 0
+                }
+            }
+        ]
+    }
+}
+2024-09-10 21:37:44,020 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085480989753352,
+    "seq_no": 1,
+    "length": 84,
+    "body": {
+        "_": "functions.InvokeWithLayer",
+        "layer": 158,
+        "query": {
+            "_": "functions.InitConnection",
+            "api_id": 26320324,
+            "device_model": "CPython 3.10.11",
+            "system_version": "Windows 10",
+            "app_version": "Pyrogram 2.0.106",
+            "system_lang_code": "en",
+            "lang_pack": "",
+            "lang_code": "en",
+            "query": {
+                "_": "functions.help.GetConfig"
+            }
+        }
+    }
+}
+2024-09-10 21:37:44,127 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085481331856385,
+    "seq_no": 3,
+    "length": 400,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085480989753352,
+        "result": {
+            "_": "types.Config",
+            "date": 1725993464,
+            "expires": 1725996632,
+            "test_mode": false,
+            "this_dc": 2,
+            "dc_options": [
+                {
+                    "_": "types.DcOption",
+                    "id": 1,
+                    "ip_address": "149.154.175.57",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 1,
+                    "ip_address": "149.154.175.54",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": true,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 1,
+                    "ip_address": "2001:0b28:f23d:f001:0000:0000:0000:000a",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 2,
+                    "ip_address": "149.154.167.50",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 2,
+                    "ip_address": "149.154.167.41",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": true,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 2,
+                    "ip_address": "149.154.167.222",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": true,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 2,
+                    "ip_address": "2001:067c:04e8:f002:0000:0000:0000:000a",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 2,
+                    "ip_address": "2001:067c:04e8:f002:0000:0000:0000:000b",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": true,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 3,
+                    "ip_address": "149.154.175.100",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 3,
+                    "ip_address": "149.154.175.100",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": true,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 3,
+                    "ip_address": "2001:0b28:f23d:f003:0000:0000:0000:000a",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 4,
+                    "ip_address": "149.154.167.92",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 4,
+                    "ip_address": "149.154.167.92",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": true,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 4,
+                    "ip_address": "2001:067c:04e8:f004:0000:0000:0000:000a",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 4,
+                    "ip_address": "149.154.165.136",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": true,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 4,
+                    "ip_address": "2001:067c:04e8:f004:0000:0000:0000:000b",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": true,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 5,
+                    "ip_address": "2001:0b28:f23f:f005:0000:0000:0000:000a",
+                    "port": 443,
+                    "ipv6": true,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 5,
+                    "ip_address": "91.108.56.131",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": false,
+                    "this_port_only": false
+                },
+                {
+                    "_": "types.DcOption",
+                    "id": 5,
+                    "ip_address": "91.108.56.131",
+                    "port": 443,
+                    "ipv6": false,
+                    "media_only": false,
+                    "tcpo_only": false,
+                    "cdn": false,
+                    "static": true,
+                    "this_port_only": false
+                }
+            ],
+            "dc_txt_domain_name": "apv3.stel.com",
+            "chat_size_max": 200,
+            "megagroup_size_max": 200000,
+            "forwarded_count_max": 100,
+            "online_update_period_ms": 210000,
+            "offline_blur_timeout_ms": 5000,
+            "offline_idle_timeout_ms": 30000,
+            "online_cloud_timeout_ms": 300000,
+            "notify_cloud_delay_ms": 30000,
+            "notify_default_delay_ms": 1500,
+            "push_chat_period_ms": 60000,
+            "push_chat_limit": 2,
+            "edit_time_limit": 172800,
+            "revoke_time_limit": 2147483647,
+            "revoke_pm_time_limit": 2147483647,
+            "rating_e_decay": 2419200,
+            "stickers_recent_limit": 200,
+            "channels_read_media_period": 604800,
+            "call_receive_timeout_ms": 20000,
+            "call_ring_timeout_ms": 90000,
+            "call_connect_timeout_ms": 30000,
+            "call_packet_timeout_ms": 10000,
+            "me_url_prefix": "https://t.me/",
+            "caption_length_max": 1024,
+            "message_length_max": 4096,
+            "webfile_dc_id": 4,
+            "default_p2p_contacts": true,
+            "preload_featured_stickers": false,
+            "revoke_pm_inbox": true,
+            "blocked_mode": false,
+            "force_try_ipv6": false,
+            "gif_search_username": "gif",
+            "venue_search_username": "foursquare",
+            "img_search_username": "bing"
+        }
+    }
+}
+2024-09-10 21:37:44,130 - INFO - Session initialized: Layer 158
+2024-09-10 21:37:44,130 - INFO - Device: CPython 3.10.11 - Pyrogram 2.0.106
+2024-09-10 21:37:44,130 - INFO - System: Windows 10 (en)
+2024-09-10 21:37:44,131 - INFO - Session started
+2024-09-10 21:37:44,138 - INFO - PingTask started
+2024-09-10 21:37:44,139 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085480989753360,
+    "seq_no": 3,
+    "length": 64,
+    "body": {
+        "_": "functions.auth.SendCode",
+        "phone_number": "79157460112",
+        "api_id": 26320324,
+        "api_hash": "e7e8c3dc08102719b2fcd3d267505b6e",
+        "settings": {
+            "_": "types.CodeSettings"
+        }
+    }
+}
+2024-09-10 21:37:44,279 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085481995928577,
+    "seq_no": 5,
+    "length": 48,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085480989753360,
+        "result": {
+            "_": "types.auth.SentCode",
+            "type": {
+                "_": "types.auth.SentCodeTypeApp",
+                "length": 5
+            },
+            "phone_code_hash": "a01412a77fcb4a71bf"
+        }
+    }
+}
+2024-09-10 21:37:49,144 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085502464589824,
+    "seq_no": 5,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:37:49,225 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085503232729089,
+    "seq_no": 6,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085502464589824,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:37:54,149 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085523939426304,
+    "seq_no": 7,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:37:54,228 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085524721922049,
+    "seq_no": 6,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085523939426304,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:37:58,230 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085541119295488,
+    "seq_no": 9,
+    "length": 48,
+    "body": {
+        "_": "functions.auth.SignIn",
+        "phone_number": "79157460112",
+        "phone_code_hash": "a01412a77fcb4a71bf",
+        "phone_code": "34474"
+    }
+}
+2024-09-10 21:37:58,367 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085542492292097,
+    "seq_no": 7,
+    "length": 184,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085541119295488,
+        "result": {
+            "_": "types.auth.Authorization",
+            "user": {
+                "_": "types.User",
+                "id": 1892042652,
+                "is_self": true,
+                "contact": true,
+                "mutual_contact": true,
+                "deleted": false,
+                "bot": false,
+                "bot_chat_history": false,
+                "bot_nochats": false,
+                "verified": false,
+                "restricted": false,
+                "min": false,
+                "bot_inline_geo": false,
+                "support": false,
+                "scam": false,
+                "apply_min_photo": false,
+                "fake": false,
+                "bot_attach_menu": false,
+                "premium": false,
+                "attach_menu_enabled": false,
+                "bot_can_edit": false,
+                "access_hash": -5051557823455168370,
+                "first_name": "пролетарский",
+                "last_name": "паразит",
+                "username": "ganjabasmen",
+                "phone": "79157460112",
+                "photo": {
+                    "_": "types.UserProfilePhoto",
+                    "photo_id": 5386813902257511896,
+                    "dc_id": 2,
+                    "has_video": false,
+                    "personal": false,
+                    "stripped_thumb": "b'\\x01\\x08\\x08\\x89\\xc2yJA\\x1eI\\x18\\xcf`(\\xa2\\x8a\\x00'"
+                },
+                "status": {
+                    "_": "types.UserStatusOffline",
+                    "was_online": 1725993470
+                },
+                "restriction_reason": [],
+                "usernames": []
+            },
+            "setup_password_required": false,
+            "future_auth_token": "b'\\x06\\x92\\xe0f\\xa3\\x1cwj\\x0b\\xee\\xdb@\\x14\\xf0Q)\\xda\\xec'"
+        }
+    }
+}
+2024-09-10 21:37:58,445 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085541119295496,
+    "seq_no": 11,
+    "length": 4,
+    "body": {
+        "_": "functions.updates.GetState"
+    }
+}
+2024-09-10 21:37:58,539 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085543238330369,
+    "seq_no": 9,
+    "length": 36,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085541119295496,
+        "result": {
+            "_": "types.updates.State",
+            "pts": 1395332,
+            "qts": 0,
+            "date": 1725993478,
+            "seq": 1,
+            "unread_count": 996
+        }
+    }
+}
+2024-09-10 21:37:58,540 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085541119295504,
+    "seq_no": 13,
+    "length": 8,
+    "body": {
+        "_": "functions.users.GetFullUser",
+        "id": {
+            "_": "types.InputUserSelf"
+        }
+    }
+}
+2024-09-10 21:37:58,644 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085543669149697,
+    "seq_no": 11,
+    "length": 756,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085541119295504,
+        "result": {
+            "_": "types.users.UserFull",
+            "full_user": {
+                "_": "types.UserFull",
+                "id": 1892042652,
+                "settings": {
+                    "_": "types.PeerSettings",
+                    "report_spam": false,
+                    "add_contact": false,
+                    "block_contact": false,
+                    "share_contact": false,
+                    "need_contacts_exception": false,
+                    "report_geo": false,
+                    "autoarchived": false,
+                    "invite_members": false,
+                    "request_chat_broadcast": false
+                },
+                "notify_settings": {
+                    "_": "types.PeerNotifySettings",
+                    "show_previews": true,
+                    "silent": false,
+                    "mute_until": 0,
+                    "ios_sound": {
+                        "_": "types.NotificationSoundDefault"
+                    },
+                    "android_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    },
+                    "other_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    }
+                },
+                "common_chats_count": 0,
+                "blocked": false,
+                "phone_calls_available": false,
+                "phone_calls_private": false,
+                "can_pin_message": true,
+                "has_scheduled": false,
+                "video_calls_available": false,
+                "voice_messages_forbidden": false,
+                "translations_disabled": false,
+                "about": "https://t.me/southsparkvse",
+                "profile_photo": {
+                    "_": "types.Photo",
+                    "id": 5386813902257511896,
+                    "access_hash": -7705848892048508858,
+                    "file_reference": "b'\\x00f\\xe0\\x92\\x06\\xcb\\xed}\\xca\\x92a\\xec\\x97\\x07Er\\xf6\\xbe\\x87\\xda\\x19'",
+                    "date": 1725429823,
+                    "sizes": [
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "a",
+                            "w": 160,
+                            "h": 160,
+                            "size": 13315
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "b",
+                            "w": 320,
+                            "h": 320,
+                            "size": 38312
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "c",
+                            "w": 640,
+                            "h": 640,
+                            "size": 118692
+                        },
+                        {
+                            "_": "types.PhotoStrippedSize",
+                            "type": "i",
+                            "bytes": "b'\\x01((\\xcb\\xb6\\xb7{\\x99B\\'\\xe2Oj\\xd7\\xb7\\xb7\\xb3\\x8a\\x7f!\\x00\\x96p2\\xc4\\xf4\\x15\\x141\\x1b{\\x00P\\x0f5\\xc6\\xe1\\xbb\\xbf\\xb0\\xa3*\\xb1\\xfe\\xf9L7\\xb2\\xf0\\xac\\x01\\x1e\\xc3\\xe9\\xe9@\\r\\xb8\\xbfx\\xee\\x1a\\x1f\\xb3\\xc7\\xf2\\x9cp:\\xd2*\\xdb\\xde\\'\\xcd\\x13D\\xfc\\x8d\\xd8\\xc0\\'\\xd3\\xd2\\x90\\xa3i\\xf3\\x95\\x95\\x8bK(\\x18\\x94\\x1f\\xbb\\xce\\x0f^\\xf8\\xa9\\xb5\\x03*\\xd8\\xf1\\x1bD\\x9b\\x80*\\xef\\x93\\xc7\\x7fj\\x00\\xcb\\xb8\\x81\\xa0\\x93kr;\\x11\\xde\\x8a\\xb9\\xb8\\xdeX\\x1c\\x8c\\xbc}N?S\\xf5\\xfe\\x94P\\x05\\xb3o\\x1d\\xc1\\x88\\xbc\\xbeX\\x8cd\\x1f\\xca\\x98%\\xdc\\xc6}F/\\x90q\\x1b\\x05\\xe2\\x92\\xdc&\\xa1\\xa7\\x88X\\x9d\\xf1\\x1c\\x8cu\\xc5Iw\"\\xc3\\nA\\xb1d\\x89S(\\xcf\\x93\\x92;q@\\x14/-fXR\\xe2I\\xbc\\xc5s\\xc1$\\x9c\\x03\\xcd]\\x92\\xda\\xe1\\xe0h$\\xb8G\\x1e^\\xf5m\\xb9\\xc8\\x07\\xa6j\\xbc\\xd2\\xcb=\\xb6\\xc0\\xa4\\xc4#\\x07\\n\\xb8\\x08\\xc3\\xff\\x00\\xd5\\xfa\\xd4\\x10\\xdeH \\x10\\x00Y\\xb0U>\\x87\\xa8\\xfeT\\x01cH\\xff\\x00Sw\\x9f\\xbb\\xb0\\x7fZ)\\xf2m\\xb1\\xd2\\xfc\\xa0\\xc0\\xcb)\\xcbc\\xb7\\xf9\\xff\\x00\\x1a(\\x036\\t\\xde\\xde@\\xf1\\x9c\\x11Z\\xf1_\\xdbNC\\xba\\x84\\x98w\\xc7\\x14Q@\\x16\\x1e\\xe84EKG\\xb4\\x8c\\x1f\\xa7\\xe7Y\\xfee\\x9d\\x98o+\\xf7\\xaf\\xd05\\x14P\\x05\\t\\xe6y\\xe4.\\xe7\\'\\xf9QE\\x14\\x01'"
+                        }
+                    ],
+                    "dc_id": 2,
+                    "has_stickers": false,
+                    "video_sizes": []
+                },
+                "premium_gifts": []
+            },
+            "chats": [],
+            "users": [
+                {
+                    "_": "types.User",
+                    "id": 1892042652,
+                    "is_self": true,
+                    "contact": true,
+                    "mutual_contact": true,
+                    "deleted": false,
+                    "bot": false,
+                    "bot_chat_history": false,
+                    "bot_nochats": false,
+                    "verified": false,
+                    "restricted": false,
+                    "min": false,
+                    "bot_inline_geo": false,
+                    "support": false,
+                    "scam": false,
+                    "apply_min_photo": false,
+                    "fake": false,
+                    "bot_attach_menu": false,
+                    "premium": false,
+                    "attach_menu_enabled": false,
+                    "bot_can_edit": false,
+                    "access_hash": -5051557823455168370,
+                    "first_name": "пролетарский",
+                    "last_name": "паразит",
+                    "username": "ganjabasmen",
+                    "phone": "79157460112",
+                    "photo": {
+                        "_": "types.UserProfilePhoto",
+                        "photo_id": 5386813902257511896,
+                        "dc_id": 2,
+                        "has_video": false,
+                        "personal": false,
+                        "stripped_thumb": "b'\\x01\\x08\\x08\\x89\\xc2yJA\\x1eI\\x18\\xcf`(\\xa2\\x8a\\x00'"
+                    },
+                    "status": {
+                        "_": "types.UserStatusOnline",
+                        "expires": 1725993778
+                    },
+                    "restriction_reason": [],
+                    "usernames": []
+                }
+            ]
+        }
+    }
+}
+2024-09-10 21:37:58,649 - INFO - Started 12 HandlerTasks
+2024-09-10 21:37:59,161 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085545414262784,
+    "seq_no": 15,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:37:59,240 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085546250193921,
+    "seq_no": 12,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085545414262784,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:37:59,701 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085548230270977,
+    "seq_no": 13,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1778553012,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993779
+            }
+        },
+        "date": 1725993478
+    }
+}
+2024-09-10 21:38:03,824 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085565939338241,
+    "seq_no": 15,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1778553012,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993483
+            }
+        },
+        "date": 1725993482
+    }
+}
+2024-09-10 21:38:04,182 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085566889099264,
+    "seq_no": 17,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:04,239 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085567718031361,
+    "seq_no": 17,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1346425369,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993484
+            }
+        },
+        "date": 1725993483
+    }
+}
+2024-09-10 21:38:04,292 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085567812759553,
+    "seq_no": 18,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085566889099264,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:05,701 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085573998184449,
+    "seq_no": 19,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1778553012,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993785
+            }
+        },
+        "date": 1725993484
+    }
+}
+2024-09-10 21:38:05,701 - DEBUG - Sending 10 acks
+2024-09-10 21:38:05,701 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085571184066564,
+    "seq_no": 18,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413085543238330369,
+            7413085542492292097,
+            7413085481995928577,
+            7413085480834835457,
+            7413085481331856385,
+            7413085543669149697,
+            7413085548230270977,
+            7413085565939338241,
+            7413085567718031361,
+            7413085573998184449
+        ]
+    }
+}
+2024-09-10 21:38:09,198 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085588363935744,
+    "seq_no": 19,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:09,277 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085589358817281,
+    "seq_no": 20,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085588363935744,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:10,337 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085593910496257,
+    "seq_no": 21,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1778553012,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993490
+            }
+        },
+        "date": 1725993489
+    }
+}
+2024-09-10 21:38:10,728 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085595586957313,
+    "seq_no": 23,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1027283281,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993490
+            }
+        },
+        "date": 1725993489
+    }
+}
+2024-09-10 21:38:13,219 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085606290395137,
+    "seq_no": 25,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1027283281,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993793
+            }
+        },
+        "date": 1725993492
+    }
+}
+2024-09-10 21:38:14,217 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085609838772224,
+    "seq_no": 21,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:14,223 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085610600396801,
+    "seq_no": 27,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5601727975,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993794
+            }
+        },
+        "date": 1725993493
+    }
+}
+2024-09-10 21:38:14,295 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085610911974401,
+    "seq_no": 28,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085609838772224,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:15,946 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085617995339777,
+    "seq_no": 29,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 2011264216,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993495
+            }
+        },
+        "date": 1725993494
+    }
+}
+2024-09-10 21:38:19,214 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085631313608704,
+    "seq_no": 23,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:19,293 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085632373820417,
+    "seq_no": 30,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085631313608704,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:23,713 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085651356125185,
+    "seq_no": 31,
+    "length": 56,
+    "body": {
+        "_": "types.Updates",
+        "updates": [
+            {
+                "_": "types.UpdateUserStatus",
+                "user_id": 1892042652,
+                "status": {
+                    "_": "types.UserStatusOnline",
+                    "expires": 1725993803
+                }
+            }
+        ],
+        "users": [],
+        "chats": [],
+        "date": 1725993502,
+        "seq": 2
+    }
+}
+2024-09-10 21:38:23,766 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085651469614081,
+    "seq_no": 33,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1892042652,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993503
+            }
+        },
+        "date": 1725993502
+    }
+}
+2024-09-10 21:38:23,766 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085651491670017,
+    "seq_no": 35,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1004498960,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993503
+            }
+        },
+        "date": 1725993502
+    }
+}
+2024-09-10 21:38:24,226 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085652788445184,
+    "seq_no": 25,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:24,304 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085653900162049,
+    "seq_no": 36,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085652788445184,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:28,507 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085671950842881,
+    "seq_no": 37,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1004498960,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993808
+            }
+        },
+        "date": 1725993507
+    }
+}
+2024-09-10 21:38:28,834 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085673354821633,
+    "seq_no": 39,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1322269374,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993508
+            }
+        },
+        "date": 1725993507
+    }
+}
+2024-09-10 21:38:28,834 - DEBUG - Sending 10 acks
+2024-09-10 21:38:28,834 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085669968314376,
+    "seq_no": 26,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413085610600396801,
+            7413085593910496257,
+            7413085595586957313,
+            7413085606290395137,
+            7413085617995339777,
+            7413085651356125185,
+            7413085651469614081,
+            7413085651491670017,
+            7413085671950842881,
+            7413085673354821633
+        ]
+    }
+}
+2024-09-10 21:38:29,250 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085674263281664,
+    "seq_no": 27,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:29,329 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085675483003905,
+    "seq_no": 40,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085674263281664,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:29,703 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085677084465153,
+    "seq_no": 41,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5601727975,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993509
+            }
+        },
+        "date": 1725993508
+    }
+}
+2024-09-10 21:38:33,530 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085693520530433,
+    "seq_no": 43,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5555749891,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993513
+            }
+        },
+        "date": 1725993512
+    }
+}
+2024-09-10 21:38:34,266 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085695738118144,
+    "seq_no": 29,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:34,344 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085697023291393,
+    "seq_no": 44,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085695738118144,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:38,833 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085716300018689,
+    "seq_no": 45,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1183377883,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993818
+            }
+        },
+        "date": 1725993517
+    }
+}
+2024-09-10 21:38:39,279 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085717212954624,
+    "seq_no": 31,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:39,357 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085718552158209,
+    "seq_no": 46,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085717212954624,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:44,040 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085738664335361,
+    "seq_no": 47,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1329387796,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993823
+            }
+        },
+        "date": 1725993522
+    }
+}
+2024-09-10 21:38:44,241 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085739521373185,
+    "seq_no": 49,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1294479017,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993524
+            }
+        },
+        "date": 1725993523
+    }
+}
+2024-09-10 21:38:44,280 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085738687791112,
+    "seq_no": 33,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:44,359 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085740033538049,
+    "seq_no": 50,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085738687791112,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:46,193 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085747913839617,
+    "seq_no": 51,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5926562997,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993826
+            }
+        },
+        "date": 1725993525
+    }
+}
+2024-09-10 21:38:49,013 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085759956534273,
+    "seq_no": 53,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1183377883,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993528
+            }
+        },
+        "date": 1725993527
+    }
+}
+2024-09-10 21:38:49,283 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085760162627588,
+    "seq_no": 35,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:49,362 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085761522641921,
+    "seq_no": 54,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085760162627588,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:53,108 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085777607804929,
+    "seq_no": 55,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 6418719749,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993833
+            }
+        },
+        "date": 1725993532
+    }
+}
+2024-09-10 21:38:54,286 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085781637464064,
+    "seq_no": 37,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:38:54,365 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085783007953921,
+    "seq_no": 56,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085781637464064,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:38:56,239 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085791053631489,
+    "seq_no": 57,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 6418719749,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993536
+            }
+        },
+        "date": 1725993535
+    }
+}
+2024-09-10 21:39:02,349 - INFO - Connecting...
+2024-09-10 21:39:02,361 - INFO - Connected! Production DC2 - IPv4
+2024-09-10 21:39:02,361 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085815997202432,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:02,362 - INFO - NetworkTask started
+2024-09-10 21:39:02,620 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085818463811585,
+    "seq_no": 0,
+    "length": 28,
+    "body": {
+        "_": "types.BadServerSalt",
+        "bad_msg_id": 7413085815997202432,
+        "bad_msg_seqno": 0,
+        "error_code": 48,
+        "new_server_salt": -7458825643840648010
+    }
+}
+2024-09-10 21:39:02,620 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085815997202436,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:02,700 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085818805381129,
+    "seq_no": 2,
+    "length": 88,
+    "body": {
+        "_": "MsgContainer",
+        "messages": [
+            {
+                "_": "Message",
+                "msg_id": 7413085818805381121,
+                "seq_no": 1,
+                "length": 28,
+                "body": {
+                    "_": "types.NewSessionCreated",
+                    "first_msg_id": 7413085815997202436,
+                    "unique_id": 6739787925945946802,
+                    "server_salt": -7458825643840648010
+                }
+            },
+            {
+                "_": "Message",
+                "msg_id": 7413085818805381125,
+                "seq_no": 2,
+                "length": 20,
+                "body": {
+                    "_": "types.Pong",
+                    "msg_id": 7413085815997202436,
+                    "ping_id": 0
+                }
+            }
+        ]
+    }
+}
+2024-09-10 21:39:02,700 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085815997202448,
+    "seq_no": 1,
+    "length": 84,
+    "body": {
+        "_": "functions.InvokeWithLayer",
+        "layer": 158,
+        "query": {
+            "_": "functions.InitConnection",
+            "api_id": 26320324,
+            "device_model": "CPython 3.10.11",
+            "system_version": "Windows 10",
+            "app_version": "Pyrogram 2.0.106",
+            "system_lang_code": "en",
+            "lang_pack": "",
+            "lang_code": "en",
+            "query": {
+                "_": "functions.help.GetConfig"
+            }
+        }
+    }
+}
+2024-09-10 21:39:02,826 - INFO - Session initialized: Layer 158
+2024-09-10 21:39:02,826 - INFO - Device: CPython 3.10.11 - Pyrogram 2.0.106
+2024-09-10 21:39:02,826 - INFO - System: Windows 10 (en)
+2024-09-10 21:39:02,826 - INFO - Session started
+2024-09-10 21:39:02,826 - INFO - PingTask started
+2024-09-10 21:39:02,826 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085815997202456,
+    "seq_no": 3,
+    "length": 4,
+    "body": {
+        "_": "functions.updates.GetState"
+    }
+}
+2024-09-10 21:39:02,935 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085819815134209,
+    "seq_no": 5,
+    "length": 36,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085815997202456,
+        "result": {
+            "_": "types.updates.State",
+            "pts": 1395332,
+            "qts": 0,
+            "date": 1725993542,
+            "seq": 2,
+            "unread_count": 996
+        }
+    }
+}
+2024-09-10 21:39:02,935 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085815997202464,
+    "seq_no": 5,
+    "length": 8,
+    "body": {
+        "_": "functions.users.GetFullUser",
+        "id": {
+            "_": "types.InputUserSelf"
+        }
+    }
+}
+2024-09-10 21:39:03,058 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085820344071169,
+    "seq_no": 7,
+    "length": 756,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085815997202464,
+        "result": {
+            "_": "types.users.UserFull",
+            "full_user": {
+                "_": "types.UserFull",
+                "id": 1892042652,
+                "settings": {
+                    "_": "types.PeerSettings",
+                    "report_spam": false,
+                    "add_contact": false,
+                    "block_contact": false,
+                    "share_contact": false,
+                    "need_contacts_exception": false,
+                    "report_geo": false,
+                    "autoarchived": false,
+                    "invite_members": false,
+                    "request_chat_broadcast": false
+                },
+                "notify_settings": {
+                    "_": "types.PeerNotifySettings",
+                    "show_previews": true,
+                    "silent": false,
+                    "mute_until": 0,
+                    "ios_sound": {
+                        "_": "types.NotificationSoundDefault"
+                    },
+                    "android_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    },
+                    "other_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    }
+                },
+                "common_chats_count": 0,
+                "blocked": false,
+                "phone_calls_available": false,
+                "phone_calls_private": false,
+                "can_pin_message": true,
+                "has_scheduled": false,
+                "video_calls_available": false,
+                "voice_messages_forbidden": false,
+                "translations_disabled": false,
+                "about": "https://t.me/southsparkvse",
+                "profile_photo": {
+                    "_": "types.Photo",
+                    "id": 5386813902257511896,
+                    "access_hash": -7705848892048508858,
+                    "file_reference": "b'\\x00f\\xe0\\x92FB\\x86iD;\\xeb-\\x1c\\xa4\\xd2\"\\'6\\xdaE\\xfe'",
+                    "date": 1725429823,
+                    "sizes": [
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "a",
+                            "w": 160,
+                            "h": 160,
+                            "size": 13315
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "b",
+                            "w": 320,
+                            "h": 320,
+                            "size": 38312
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "c",
+                            "w": 640,
+                            "h": 640,
+                            "size": 118692
+                        },
+                        {
+                            "_": "types.PhotoStrippedSize",
+                            "type": "i",
+                            "bytes": "b'\\x01((\\xcb\\xb6\\xb7{\\x99B\\'\\xe2Oj\\xd7\\xb7\\xb7\\xb3\\x8a\\x7f!\\x00\\x96p2\\xc4\\xf4\\x15\\x141\\x1b{\\x00P\\x0f5\\xc6\\xe1\\xbb\\xbf\\xb0\\xa3*\\xb1\\xfe\\xf9L7\\xb2\\xf0\\xac\\x01\\x1e\\xc3\\xe9\\xe9@\\r\\xb8\\xbfx\\xee\\x1a\\x1f\\xb3\\xc7\\xf2\\x9cp:\\xd2*\\xdb\\xde\\'\\xcd\\x13D\\xfc\\x8d\\xd8\\xc0\\'\\xd3\\xd2\\x90\\xa3i\\xf3\\x95\\x95\\x8bK(\\x18\\x94\\x1f\\xbb\\xce\\x0f^\\xf8\\xa9\\xb5\\x03*\\xd8\\xf1\\x1bD\\x9b\\x80*\\xef\\x93\\xc7\\x7fj\\x00\\xcb\\xb8\\x81\\xa0\\x93kr;\\x11\\xde\\x8a\\xb9\\xb8\\xdeX\\x1c\\x8c\\xbc}N?S\\xf5\\xfe\\x94P\\x05\\xb3o\\x1d\\xc1\\x88\\xbc\\xbeX\\x8cd\\x1f\\xca\\x98%\\xdc\\xc6}F/\\x90q\\x1b\\x05\\xe2\\x92\\xdc&\\xa1\\xa7\\x88X\\x9d\\xf1\\x1c\\x8cu\\xc5Iw\"\\xc3\\nA\\xb1d\\x89S(\\xcf\\x93\\x92;q@\\x14/-fXR\\xe2I\\xbc\\xc5s\\xc1$\\x9c\\x03\\xcd]\\x92\\xda\\xe1\\xe0h$\\xb8G\\x1e^\\xf5m\\xb9\\xc8\\x07\\xa6j\\xbc\\xd2\\xcb=\\xb6\\xc0\\xa4\\xc4#\\x07\\n\\xb8\\x08\\xc3\\xff\\x00\\xd5\\xfa\\xd4\\x10\\xdeH \\x10\\x00Y\\xb0U>\\x87\\xa8\\xfeT\\x01cH\\xff\\x00Sw\\x9f\\xbb\\xb0\\x7fZ)\\xf2m\\xb1\\xd2\\xfc\\xa0\\xc0\\xcb)\\xcbc\\xb7\\xf9\\xff\\x00\\x1a(\\x036\\t\\xde\\xde@\\xf1\\x9c\\x11Z\\xf1_\\xdbNC\\xba\\x84\\x98w\\xc7\\x14Q@\\x16\\x1e\\xe84EKG\\xb4\\x8c\\x1f\\xa7\\xe7Y\\xfee\\x9d\\x98o+\\xf7\\xaf\\xd05\\x14P\\x05\\t\\xe6y\\xe4.\\xe7\\'\\xf9QE\\x14\\x01'"
+                        }
+                    ],
+                    "dc_id": 2,
+                    "has_stickers": false,
+                    "video_sizes": []
+                },
+                "premium_gifts": []
+            },
+            "chats": [],
+            "users": [
+                {
+                    "_": "types.User",
+                    "id": 1892042652,
+                    "is_self": true,
+                    "contact": true,
+                    "mutual_contact": true,
+                    "deleted": false,
+                    "bot": false,
+                    "bot_chat_history": false,
+                    "bot_nochats": false,
+                    "verified": false,
+                    "restricted": false,
+                    "min": false,
+                    "bot_inline_geo": false,
+                    "support": false,
+                    "scam": false,
+                    "apply_min_photo": false,
+                    "fake": false,
+                    "bot_attach_menu": false,
+                    "premium": false,
+                    "attach_menu_enabled": false,
+                    "bot_can_edit": false,
+                    "access_hash": -5051557823455168370,
+                    "first_name": "пролетарский",
+                    "last_name": "паразит",
+                    "username": "ganjabasmen",
+                    "phone": "79157460112",
+                    "photo": {
+                        "_": "types.UserProfilePhoto",
+                        "photo_id": 5386813902257511896,
+                        "dc_id": 2,
+                        "has_video": false,
+                        "personal": false,
+                        "stripped_thumb": "b'\\x01\\x08\\x08\\x89\\xc2yJA\\x1eI\\x18\\xcf`(\\xa2\\x8a\\x00'"
+                    },
+                    "status": {
+                        "_": "types.UserStatusOffline",
+                        "was_online": 1725993503
+                    },
+                    "restriction_reason": [],
+                    "usernames": []
+                }
+            ]
+        }
+    }
+}
+2024-09-10 21:39:03,058 - INFO - Started 12 HandlerTasks
+2024-09-10 21:39:04,079 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085824722930689,
+    "seq_no": 9,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1798990285,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993843
+            }
+        },
+        "date": 1725993543
+    }
+}
+2024-09-10 21:39:07,846 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085837472038912,
+    "seq_no": 7,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:07,925 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085841250088961,
+    "seq_no": 10,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085837472038912,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:09,976 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085850056236033,
+    "seq_no": 11,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5311249281,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993849
+            }
+        },
+        "date": 1725993548
+    }
+}
+2024-09-10 21:39:11,375 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085856067345409,
+    "seq_no": 13,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1798990285,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993551
+            }
+        },
+        "date": 1725993550
+    }
+}
+2024-09-10 21:39:12,848 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085858946875392,
+    "seq_no": 9,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:12,929 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085862732958721,
+    "seq_no": 14,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085858946875392,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:13,455 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085864897211393,
+    "seq_no": 15,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5222969519,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993853
+            }
+        },
+        "date": 1725993552
+    }
+}
+2024-09-10 21:39:14,437 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085869214247937,
+    "seq_no": 17,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1443259523,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993554
+            }
+        },
+        "date": 1725993553
+    }
+}
+2024-09-10 21:39:15,219 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085872576607233,
+    "seq_no": 19,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1778553012,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993855
+            }
+        },
+        "date": 1725993554
+    }
+}
+2024-09-10 21:39:15,219 - DEBUG - Sending 10 acks
+2024-09-10 21:39:15,219 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085871831777284,
+    "seq_no": 10,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413085824722930689,
+            7413085819815134209,
+            7413085818805381121,
+            7413085819215216641,
+            7413085820344071169,
+            7413085850056236033,
+            7413085856067345409,
+            7413085864897211393,
+            7413085869214247937,
+            7413085872576607233
+        ]
+    }
+}
+2024-09-10 21:39:17,858 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085880421711872,
+    "seq_no": 11,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:17,860 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085883912250369,
+    "seq_no": 21,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1412395965,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993857
+            }
+        },
+        "date": 1725993556
+    }
+}
+2024-09-10 21:39:17,937 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085884252317697,
+    "seq_no": 22,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085880421711872,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:20,180 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085893879475201,
+    "seq_no": 23,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1778553012,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993560
+            }
+        },
+        "date": 1725993559
+    }
+}
+2024-09-10 21:39:20,592 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085895652441089,
+    "seq_no": 25,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5311249281,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993560
+            }
+        },
+        "date": 1725993559
+    }
+}
+2024-09-10 21:39:21,939 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085901440019457,
+    "seq_no": 27,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1265851365,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993561
+            }
+        },
+        "date": 1725993560
+    }
+}
+2024-09-10 21:39:32,674 - INFO - Connecting...
+2024-09-10 21:39:32,677 - INFO - Connected! Production DC2 - IPv4
+2024-09-10 21:39:32,677 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085944846221312,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:32,678 - INFO - NetworkTask started
+2024-09-10 21:39:33,001 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085948947794945,
+    "seq_no": 0,
+    "length": 28,
+    "body": {
+        "_": "types.BadServerSalt",
+        "bad_msg_id": 7413085944846221312,
+        "bad_msg_seqno": 0,
+        "error_code": 48,
+        "new_server_salt": -7458825643840648010
+    }
+}
+2024-09-10 21:39:33,001 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085949141188608,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:33,079 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085949285933065,
+    "seq_no": 2,
+    "length": 88,
+    "body": {
+        "_": "MsgContainer",
+        "messages": [
+            {
+                "_": "Message",
+                "msg_id": 7413085949285933057,
+                "seq_no": 1,
+                "length": 28,
+                "body": {
+                    "_": "types.NewSessionCreated",
+                    "first_msg_id": 7413085949141188608,
+                    "unique_id": -987036545646626180,
+                    "server_salt": -7458825643840648010
+                }
+            },
+            {
+                "_": "Message",
+                "msg_id": 7413085949285933061,
+                "seq_no": 2,
+                "length": 20,
+                "body": {
+                    "_": "types.Pong",
+                    "msg_id": 7413085949141188608,
+                    "ping_id": 0
+                }
+            }
+        ]
+    }
+}
+2024-09-10 21:39:33,079 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085949141188620,
+    "seq_no": 1,
+    "length": 84,
+    "body": {
+        "_": "functions.InvokeWithLayer",
+        "layer": 158,
+        "query": {
+            "_": "functions.InitConnection",
+            "api_id": 26320324,
+            "device_model": "CPython 3.10.11",
+            "system_version": "Windows 10",
+            "app_version": "Pyrogram 2.0.106",
+            "system_lang_code": "en",
+            "lang_pack": "",
+            "lang_code": "en",
+            "query": {
+                "_": "functions.help.GetConfig"
+            }
+        }
+    }
+}
+2024-09-10 21:39:33,256 - INFO - Session initialized: Layer 158
+2024-09-10 21:39:33,256 - INFO - Device: CPython 3.10.11 - Pyrogram 2.0.106
+2024-09-10 21:39:33,256 - INFO - System: Windows 10 (en)
+2024-09-10 21:39:33,256 - INFO - Session started
+2024-09-10 21:39:33,256 - INFO - PingTask started
+2024-09-10 21:39:33,256 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085949141188628,
+    "seq_no": 3,
+    "length": 4,
+    "body": {
+        "_": "functions.updates.GetState"
+    }
+}
+2024-09-10 21:39:33,402 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085950670977025,
+    "seq_no": 5,
+    "length": 36,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085949141188628,
+        "result": {
+            "_": "types.updates.State",
+            "pts": 1395332,
+            "qts": 0,
+            "date": 1725993573,
+            "seq": 2,
+            "unread_count": 996
+        }
+    }
+}
+2024-09-10 21:39:33,402 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085949141188636,
+    "seq_no": 5,
+    "length": 8,
+    "body": {
+        "_": "functions.users.GetFullUser",
+        "id": {
+            "_": "types.InputUserSelf"
+        }
+    }
+}
+2024-09-10 21:39:33,521 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085951182799873,
+    "seq_no": 7,
+    "length": 756,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413085949141188636,
+        "result": {
+            "_": "types.users.UserFull",
+            "full_user": {
+                "_": "types.UserFull",
+                "id": 1892042652,
+                "settings": {
+                    "_": "types.PeerSettings",
+                    "report_spam": false,
+                    "add_contact": false,
+                    "block_contact": false,
+                    "share_contact": false,
+                    "need_contacts_exception": false,
+                    "report_geo": false,
+                    "autoarchived": false,
+                    "invite_members": false,
+                    "request_chat_broadcast": false
+                },
+                "notify_settings": {
+                    "_": "types.PeerNotifySettings",
+                    "show_previews": true,
+                    "silent": false,
+                    "mute_until": 0,
+                    "ios_sound": {
+                        "_": "types.NotificationSoundDefault"
+                    },
+                    "android_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    },
+                    "other_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    }
+                },
+                "common_chats_count": 0,
+                "blocked": false,
+                "phone_calls_available": false,
+                "phone_calls_private": false,
+                "can_pin_message": true,
+                "has_scheduled": false,
+                "video_calls_available": false,
+                "voice_messages_forbidden": false,
+                "translations_disabled": false,
+                "about": "https://t.me/southsparkvse",
+                "profile_photo": {
+                    "_": "types.Photo",
+                    "id": 5386813902257511896,
+                    "access_hash": -7705848892048508858,
+                    "file_reference": "b'\\x00f\\xe0\\x92e\\xf0\\x0c\\xe0\\x17\\x19#a\\xc2\\xd6L\\xfa (N\\xe3\\xca'",
+                    "date": 1725429823,
+                    "sizes": [
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "a",
+                            "w": 160,
+                            "h": 160,
+                            "size": 13315
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "b",
+                            "w": 320,
+                            "h": 320,
+                            "size": 38312
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "c",
+                            "w": 640,
+                            "h": 640,
+                            "size": 118692
+                        },
+                        {
+                            "_": "types.PhotoStrippedSize",
+                            "type": "i",
+                            "bytes": "b'\\x01((\\xcb\\xb6\\xb7{\\x99B\\'\\xe2Oj\\xd7\\xb7\\xb7\\xb3\\x8a\\x7f!\\x00\\x96p2\\xc4\\xf4\\x15\\x141\\x1b{\\x00P\\x0f5\\xc6\\xe1\\xbb\\xbf\\xb0\\xa3*\\xb1\\xfe\\xf9L7\\xb2\\xf0\\xac\\x01\\x1e\\xc3\\xe9\\xe9@\\r\\xb8\\xbfx\\xee\\x1a\\x1f\\xb3\\xc7\\xf2\\x9cp:\\xd2*\\xdb\\xde\\'\\xcd\\x13D\\xfc\\x8d\\xd8\\xc0\\'\\xd3\\xd2\\x90\\xa3i\\xf3\\x95\\x95\\x8bK(\\x18\\x94\\x1f\\xbb\\xce\\x0f^\\xf8\\xa9\\xb5\\x03*\\xd8\\xf1\\x1bD\\x9b\\x80*\\xef\\x93\\xc7\\x7fj\\x00\\xcb\\xb8\\x81\\xa0\\x93kr;\\x11\\xde\\x8a\\xb9\\xb8\\xdeX\\x1c\\x8c\\xbc}N?S\\xf5\\xfe\\x94P\\x05\\xb3o\\x1d\\xc1\\x88\\xbc\\xbeX\\x8cd\\x1f\\xca\\x98%\\xdc\\xc6}F/\\x90q\\x1b\\x05\\xe2\\x92\\xdc&\\xa1\\xa7\\x88X\\x9d\\xf1\\x1c\\x8cu\\xc5Iw\"\\xc3\\nA\\xb1d\\x89S(\\xcf\\x93\\x92;q@\\x14/-fXR\\xe2I\\xbc\\xc5s\\xc1$\\x9c\\x03\\xcd]\\x92\\xda\\xe1\\xe0h$\\xb8G\\x1e^\\xf5m\\xb9\\xc8\\x07\\xa6j\\xbc\\xd2\\xcb=\\xb6\\xc0\\xa4\\xc4#\\x07\\n\\xb8\\x08\\xc3\\xff\\x00\\xd5\\xfa\\xd4\\x10\\xdeH \\x10\\x00Y\\xb0U>\\x87\\xa8\\xfeT\\x01cH\\xff\\x00Sw\\x9f\\xbb\\xb0\\x7fZ)\\xf2m\\xb1\\xd2\\xfc\\xa0\\xc0\\xcb)\\xcbc\\xb7\\xf9\\xff\\x00\\x1a(\\x036\\t\\xde\\xde@\\xf1\\x9c\\x11Z\\xf1_\\xdbNC\\xba\\x84\\x98w\\xc7\\x14Q@\\x16\\x1e\\xe84EKG\\xb4\\x8c\\x1f\\xa7\\xe7Y\\xfee\\x9d\\x98o+\\xf7\\xaf\\xd05\\x14P\\x05\\t\\xe6y\\xe4.\\xe7\\'\\xf9QE\\x14\\x01'"
+                        }
+                    ],
+                    "dc_id": 2,
+                    "has_stickers": false,
+                    "video_sizes": []
+                },
+                "premium_gifts": []
+            },
+            "chats": [],
+            "users": [
+                {
+                    "_": "types.User",
+                    "id": 1892042652,
+                    "is_self": true,
+                    "contact": true,
+                    "mutual_contact": true,
+                    "deleted": false,
+                    "bot": false,
+                    "bot_chat_history": false,
+                    "bot_nochats": false,
+                    "verified": false,
+                    "restricted": false,
+                    "min": false,
+                    "bot_inline_geo": false,
+                    "support": false,
+                    "scam": false,
+                    "apply_min_photo": false,
+                    "fake": false,
+                    "bot_attach_menu": false,
+                    "premium": false,
+                    "attach_menu_enabled": false,
+                    "bot_can_edit": false,
+                    "access_hash": -5051557823455168370,
+                    "first_name": "пролетарский",
+                    "last_name": "паразит",
+                    "username": "ganjabasmen",
+                    "phone": "79157460112",
+                    "photo": {
+                        "_": "types.UserProfilePhoto",
+                        "photo_id": 5386813902257511896,
+                        "dc_id": 2,
+                        "has_video": false,
+                        "personal": false,
+                        "stripped_thumb": "b'\\x01\\x08\\x08\\x89\\xc2yJA\\x1eI\\x18\\xcf`(\\xa2\\x8a\\x00'"
+                    },
+                    "status": {
+                        "_": "types.UserStatusOffline",
+                        "was_online": 1725993503
+                    },
+                    "restriction_reason": [],
+                    "usernames": []
+                }
+            ]
+        }
+    }
+}
+2024-09-10 21:39:33,521 - INFO - Started 12 HandlerTasks
+2024-09-10 21:39:38,268 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085970616025088,
+    "seq_no": 7,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:38,349 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085971905247233,
+    "seq_no": 8,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085970616025088,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:42,823 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085991127501825,
+    "seq_no": 9,
+    "length": 128,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657207,
+        "from_id": 839368961,
+        "chat_id": 4592970990,
+        "message": "@Langur0v ИДИ НАХУЙ СО СВОИМ Т ЛАУНЧЕРРС",
+        "pts": 1395333,
+        "pts_count": 1,
+        "date": 1725993582,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": [
+            {
+                "_": "types.MessageEntityMention",
+                "offset": 0,
+                "length": 9
+            }
+        ]
+    }
+}
+2024-09-10 21:39:42,824 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085987795894276,
+    "seq_no": 9,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395332,
+        "date": 1725993582,
+        "qts": -1
+    }
+}
+2024-09-10 21:39:43,285 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085992090861572,
+    "seq_no": 11,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:43,366 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085993462726657,
+    "seq_no": 12,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413085992090861572,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:44,607 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413085998793903105,
+    "seq_no": 13,
+    "length": 52,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657208,
+        "from_id": 839368961,
+        "chat_id": 4592970990,
+        "message": "БЛЯТЬ",
+        "pts": 1395334,
+        "pts_count": 1,
+        "date": 1725993584,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:39:44,607 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413085996385828868,
+    "seq_no": 13,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395333,
+        "date": 1725993584,
+        "qts": -1
+    }
+}
+2024-09-10 21:39:48,288 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086013565698048,
+    "seq_no": 15,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:48,367 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086014944851969,
+    "seq_no": 16,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086013565698048,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:48,674 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086016256851969,
+    "seq_no": 17,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1183377883,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993888
+            }
+        },
+        "date": 1725993587
+    }
+}
+2024-09-10 21:39:50,986 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086026191248385,
+    "seq_no": 19,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1841671066,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725993890
+            }
+        },
+        "date": 1725993589
+    }
+}
+2024-09-10 21:39:50,986 - DEBUG - Sending 10 acks
+2024-09-10 21:39:50,986 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086022155632644,
+    "seq_no": 16,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413085950670977025,
+            7413085991127501825,
+            7413085951182799873,
+            7413085949285933057,
+            7413085949910070273,
+            7413085991919182849,
+            7413085998793903105,
+            7413085999219246081,
+            7413086016256851969,
+            7413086026191248385
+        ]
+    }
+}
+2024-09-10 21:39:53,309 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086035040534528,
+    "seq_no": 17,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:39:53,395 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086036528686081,
+    "seq_no": 20,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086035040534528,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:39:54,292 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086040386822145,
+    "seq_no": 21,
+    "length": 88,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657209,
+        "from_id": 839368961,
+        "chat_id": 4592970990,
+        "message": "У МКНЯ 9399 окон открылось",
+        "pts": 1395335,
+        "pts_count": 1,
+        "date": 1725993594,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:39:54,292 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086039335501828,
+    "seq_no": 19,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395334,
+        "date": 1725993594,
+        "qts": -1
+    }
+}
+2024-09-10 21:40:24,156 - INFO - Connecting...
+2024-09-10 21:40:24,159 - INFO - Connected! Production DC2 - IPv4
+2024-09-10 21:40:24,159 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086168184520704,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:40:24,161 - INFO - NetworkTask started
+2024-09-10 21:40:24,369 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086169557972993,
+    "seq_no": 0,
+    "length": 28,
+    "body": {
+        "_": "types.BadServerSalt",
+        "bad_msg_id": 7413086168184520704,
+        "bad_msg_seqno": 0,
+        "error_code": 48,
+        "new_server_salt": -7458825643840648010
+    }
+}
+2024-09-10 21:40:24,369 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086168184520708,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:40:24,448 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086169895587849,
+    "seq_no": 2,
+    "length": 88,
+    "body": {
+        "_": "MsgContainer",
+        "messages": [
+            {
+                "_": "Message",
+                "msg_id": 7413086169895587841,
+                "seq_no": 1,
+                "length": 28,
+                "body": {
+                    "_": "types.NewSessionCreated",
+                    "first_msg_id": 7413086168184520708,
+                    "unique_id": -4899376408414943210,
+                    "server_salt": -7458825643840648010
+                }
+            },
+            {
+                "_": "Message",
+                "msg_id": 7413086169895587845,
+                "seq_no": 2,
+                "length": 20,
+                "body": {
+                    "_": "types.Pong",
+                    "msg_id": 7413086168184520708,
+                    "ping_id": 0
+                }
+            }
+        ]
+    }
+}
+2024-09-10 21:40:24,448 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086168184520720,
+    "seq_no": 1,
+    "length": 84,
+    "body": {
+        "_": "functions.InvokeWithLayer",
+        "layer": 158,
+        "query": {
+            "_": "functions.InitConnection",
+            "api_id": 26320324,
+            "device_model": "CPython 3.10.11",
+            "system_version": "Windows 10",
+            "app_version": "Pyrogram 2.0.106",
+            "system_lang_code": "en",
+            "lang_pack": "",
+            "lang_code": "en",
+            "query": {
+                "_": "functions.help.GetConfig"
+            }
+        }
+    }
+}
+2024-09-10 21:40:24,623 - INFO - Session initialized: Layer 158
+2024-09-10 21:40:24,623 - INFO - Device: CPython 3.10.11 - Pyrogram 2.0.106
+2024-09-10 21:40:24,623 - INFO - System: Windows 10 (en)
+2024-09-10 21:40:24,623 - INFO - Session started
+2024-09-10 21:40:24,623 - INFO - PingTask started
+2024-09-10 21:40:24,623 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086168184520728,
+    "seq_no": 3,
+    "length": 4,
+    "body": {
+        "_": "functions.updates.GetState"
+    }
+}
+2024-09-10 21:40:24,800 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086171407918081,
+    "seq_no": 5,
+    "length": 36,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413086168184520728,
+        "result": {
+            "_": "types.updates.State",
+            "pts": 1395338,
+            "qts": 0,
+            "date": 1725993624,
+            "seq": 2,
+            "unread_count": 1002
+        }
+    }
+}
+2024-09-10 21:40:24,800 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086168184520736,
+    "seq_no": 5,
+    "length": 8,
+    "body": {
+        "_": "functions.users.GetFullUser",
+        "id": {
+            "_": "types.InputUserSelf"
+        }
+    }
+}
+2024-09-10 21:40:24,967 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086172125274113,
+    "seq_no": 7,
+    "length": 756,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413086168184520736,
+        "result": {
+            "_": "types.users.UserFull",
+            "full_user": {
+                "_": "types.UserFull",
+                "id": 1892042652,
+                "settings": {
+                    "_": "types.PeerSettings",
+                    "report_spam": false,
+                    "add_contact": false,
+                    "block_contact": false,
+                    "share_contact": false,
+                    "need_contacts_exception": false,
+                    "report_geo": false,
+                    "autoarchived": false,
+                    "invite_members": false,
+                    "request_chat_broadcast": false
+                },
+                "notify_settings": {
+                    "_": "types.PeerNotifySettings",
+                    "show_previews": true,
+                    "silent": false,
+                    "mute_until": 0,
+                    "ios_sound": {
+                        "_": "types.NotificationSoundDefault"
+                    },
+                    "android_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    },
+                    "other_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    }
+                },
+                "common_chats_count": 0,
+                "blocked": false,
+                "phone_calls_available": false,
+                "phone_calls_private": false,
+                "can_pin_message": true,
+                "has_scheduled": false,
+                "video_calls_available": false,
+                "voice_messages_forbidden": false,
+                "translations_disabled": false,
+                "about": "https://t.me/southsparkvse",
+                "profile_photo": {
+                    "_": "types.Photo",
+                    "id": 5386813902257511896,
+                    "access_hash": -7705848892048508858,
+                    "file_reference": "b'\\x00f\\xe0\\x92\\x98m\\xed\\xdeq\\x8d\\x11\\xbb\\x04O\\x16\\xd2\\xf9nY|,'",
+                    "date": 1725429823,
+                    "sizes": [
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "a",
+                            "w": 160,
+                            "h": 160,
+                            "size": 13315
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "b",
+                            "w": 320,
+                            "h": 320,
+                            "size": 38312
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "c",
+                            "w": 640,
+                            "h": 640,
+                            "size": 118692
+                        },
+                        {
+                            "_": "types.PhotoStrippedSize",
+                            "type": "i",
+                            "bytes": "b'\\x01((\\xcb\\xb6\\xb7{\\x99B\\'\\xe2Oj\\xd7\\xb7\\xb7\\xb3\\x8a\\x7f!\\x00\\x96p2\\xc4\\xf4\\x15\\x141\\x1b{\\x00P\\x0f5\\xc6\\xe1\\xbb\\xbf\\xb0\\xa3*\\xb1\\xfe\\xf9L7\\xb2\\xf0\\xac\\x01\\x1e\\xc3\\xe9\\xe9@\\r\\xb8\\xbfx\\xee\\x1a\\x1f\\xb3\\xc7\\xf2\\x9cp:\\xd2*\\xdb\\xde\\'\\xcd\\x13D\\xfc\\x8d\\xd8\\xc0\\'\\xd3\\xd2\\x90\\xa3i\\xf3\\x95\\x95\\x8bK(\\x18\\x94\\x1f\\xbb\\xce\\x0f^\\xf8\\xa9\\xb5\\x03*\\xd8\\xf1\\x1bD\\x9b\\x80*\\xef\\x93\\xc7\\x7fj\\x00\\xcb\\xb8\\x81\\xa0\\x93kr;\\x11\\xde\\x8a\\xb9\\xb8\\xdeX\\x1c\\x8c\\xbc}N?S\\xf5\\xfe\\x94P\\x05\\xb3o\\x1d\\xc1\\x88\\xbc\\xbeX\\x8cd\\x1f\\xca\\x98%\\xdc\\xc6}F/\\x90q\\x1b\\x05\\xe2\\x92\\xdc&\\xa1\\xa7\\x88X\\x9d\\xf1\\x1c\\x8cu\\xc5Iw\"\\xc3\\nA\\xb1d\\x89S(\\xcf\\x93\\x92;q@\\x14/-fXR\\xe2I\\xbc\\xc5s\\xc1$\\x9c\\x03\\xcd]\\x92\\xda\\xe1\\xe0h$\\xb8G\\x1e^\\xf5m\\xb9\\xc8\\x07\\xa6j\\xbc\\xd2\\xcb=\\xb6\\xc0\\xa4\\xc4#\\x07\\n\\xb8\\x08\\xc3\\xff\\x00\\xd5\\xfa\\xd4\\x10\\xdeH \\x10\\x00Y\\xb0U>\\x87\\xa8\\xfeT\\x01cH\\xff\\x00Sw\\x9f\\xbb\\xb0\\x7fZ)\\xf2m\\xb1\\xd2\\xfc\\xa0\\xc0\\xcb)\\xcbc\\xb7\\xf9\\xff\\x00\\x1a(\\x036\\t\\xde\\xde@\\xf1\\x9c\\x11Z\\xf1_\\xdbNC\\xba\\x84\\x98w\\xc7\\x14Q@\\x16\\x1e\\xe84EKG\\xb4\\x8c\\x1f\\xa7\\xe7Y\\xfee\\x9d\\x98o+\\xf7\\xaf\\xd05\\x14P\\x05\\t\\xe6y\\xe4.\\xe7\\'\\xf9QE\\x14\\x01'"
+                        }
+                    ],
+                    "dc_id": 2,
+                    "has_stickers": false,
+                    "video_sizes": []
+                },
+                "premium_gifts": []
+            },
+            "chats": [],
+            "users": [
+                {
+                    "_": "types.User",
+                    "id": 1892042652,
+                    "is_self": true,
+                    "contact": true,
+                    "mutual_contact": true,
+                    "deleted": false,
+                    "bot": false,
+                    "bot_chat_history": false,
+                    "bot_nochats": false,
+                    "verified": false,
+                    "restricted": false,
+                    "min": false,
+                    "bot_inline_geo": false,
+                    "support": false,
+                    "scam": false,
+                    "apply_min_photo": false,
+                    "fake": false,
+                    "bot_attach_menu": false,
+                    "premium": false,
+                    "attach_menu_enabled": false,
+                    "bot_can_edit": false,
+                    "access_hash": -5051557823455168370,
+                    "first_name": "пролетарский",
+                    "last_name": "паразит",
+                    "username": "ganjabasmen",
+                    "phone": "79157460112",
+                    "photo": {
+                        "_": "types.UserProfilePhoto",
+                        "photo_id": 5386813902257511896,
+                        "dc_id": 2,
+                        "has_video": false,
+                        "personal": false,
+                        "stripped_thumb": "b'\\x01\\x08\\x08\\x89\\xc2yJA\\x1eI\\x18\\xcf`(\\xa2\\x8a\\x00'"
+                    },
+                    "status": {
+                        "_": "types.UserStatusOffline",
+                        "was_online": 1725993503
+                    },
+                    "restriction_reason": [],
+                    "usernames": []
+                }
+            ]
+        }
+    }
+}
+2024-09-10 21:40:24,967 - INFO - Started 12 HandlerTasks
+2024-09-10 21:40:25,267 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086173412779009,
+    "seq_no": 9,
+    "length": 84,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657213,
+        "from_id": 706224888,
+        "chat_id": 4592970990,
+        "message": "А так то тлаунчер норм",
+        "pts": 1395339,
+        "pts_count": 1,
+        "date": 1725993625,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:40:25,267 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086172479488004,
+    "seq_no": 7,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395338,
+        "date": 1725993625,
+        "qts": -1
+    }
+}
+2024-09-10 21:40:28,106 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086185604615169,
+    "seq_no": 13,
+    "length": 68,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657214,
+        "from_id": 839368961,
+        "chat_id": 4592970990,
+        "message": "Я перезапустил",
+        "pts": 1395340,
+        "pts_count": 1,
+        "date": 1725993627,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:40:28,106 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086185364389892,
+    "seq_no": 9,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395339,
+        "date": 1725993627,
+        "qts": -1
+    }
+}
+2024-09-10 21:40:29,638 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086189659357184,
+    "seq_no": 11,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:40:29,716 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086192522306561,
+    "seq_no": 16,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086189659357184,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:40:29,837 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086193042391041,
+    "seq_no": 17,
+    "length": 84,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657215,
+        "from_id": 706224888,
+        "chat_id": 4592970990,
+        "message": "Я сам через него играю",
+        "pts": 1395341,
+        "pts_count": 1,
+        "date": 1725993629,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:40:29,838 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086189659357196,
+    "seq_no": 13,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395340,
+        "date": 1725993629,
+        "qts": -1
+    }
+}
+2024-09-10 21:40:30,042 - DEBUG - Sending 10 acks
+2024-09-10 21:40:30,042 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086193954324484,
+    "seq_no": 14,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413086173412779009,
+            7413086172125274113,
+            7413086171407918081,
+            7413086169895587841,
+            7413086170511241217,
+            7413086173811101697,
+            7413086185604615169,
+            7413086186173630465,
+            7413086193042391041,
+            7413086193787240449
+        ]
+    }
+}
+2024-09-10 21:42:05,168 - WARNING - Python-dotenv could not parse statement starting at line 5
+2024-09-10 21:42:05,924 - INFO - Connecting...
+2024-09-10 21:42:05,926 - INFO - Connected! Production DC2 - IPv4
+2024-09-10 21:42:05,926 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086601976217600,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:05,926 - INFO - NetworkTask started
+2024-09-10 21:42:06,216 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086606985618433,
+    "seq_no": 0,
+    "length": 28,
+    "body": {
+        "_": "types.BadServerSalt",
+        "bad_msg_id": 7413086601976217600,
+        "bad_msg_seqno": 0,
+        "error_code": 48,
+        "new_server_salt": -7458825643840648010
+    }
+}
+2024-09-10 21:42:06,216 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086606271184896,
+    "seq_no": 0,
+    "length": 12,
+    "body": {
+        "_": "functions.Ping",
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:06,298 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086607336090633,
+    "seq_no": 2,
+    "length": 88,
+    "body": {
+        "_": "MsgContainer",
+        "messages": [
+            {
+                "_": "Message",
+                "msg_id": 7413086607336090625,
+                "seq_no": 1,
+                "length": 28,
+                "body": {
+                    "_": "types.NewSessionCreated",
+                    "first_msg_id": 7413086606271184896,
+                    "unique_id": 8636269308233352127,
+                    "server_salt": -7458825643840648010
+                }
+            },
+            {
+                "_": "Message",
+                "msg_id": 7413086607336090629,
+                "seq_no": 2,
+                "length": 20,
+                "body": {
+                    "_": "types.Pong",
+                    "msg_id": 7413086606271184896,
+                    "ping_id": 0
+                }
+            }
+        ]
+    }
+}
+2024-09-10 21:42:06,306 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086606271184908,
+    "seq_no": 1,
+    "length": 84,
+    "body": {
+        "_": "functions.InvokeWithLayer",
+        "layer": 158,
+        "query": {
+            "_": "functions.InitConnection",
+            "api_id": 26320324,
+            "device_model": "CPython 3.10.11",
+            "system_version": "Windows 10",
+            "app_version": "Pyrogram 2.0.106",
+            "system_lang_code": "en",
+            "lang_pack": "",
+            "lang_code": "en",
+            "query": {
+                "_": "functions.help.GetConfig"
+            }
+        }
+    }
+}
+2024-09-10 21:42:06,429 - INFO - Session initialized: Layer 158
+2024-09-10 21:42:06,429 - INFO - Device: CPython 3.10.11 - Pyrogram 2.0.106
+2024-09-10 21:42:06,429 - INFO - System: Windows 10 (en)
+2024-09-10 21:42:06,429 - INFO - Session started
+2024-09-10 21:42:06,443 - INFO - PingTask started
+2024-09-10 21:42:06,443 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086606271184916,
+    "seq_no": 3,
+    "length": 4,
+    "body": {
+        "_": "functions.updates.GetState"
+    }
+}
+2024-09-10 21:42:06,544 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086608389768193,
+    "seq_no": 5,
+    "length": 36,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413086606271184916,
+        "result": {
+            "_": "types.updates.State",
+            "pts": 1395350,
+            "qts": 0,
+            "date": 1725993726,
+            "seq": 2,
+            "unread_count": 1014
+        }
+    }
+}
+2024-09-10 21:42:06,544 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086606271184924,
+    "seq_no": 5,
+    "length": 8,
+    "body": {
+        "_": "functions.users.GetFullUser",
+        "id": {
+            "_": "types.InputUserSelf"
+        }
+    }
+}
+2024-09-10 21:42:06,639 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086608794836993,
+    "seq_no": 7,
+    "length": 756,
+    "body": {
+        "_": "types.RpcResult",
+        "req_msg_id": 7413086606271184924,
+        "result": {
+            "_": "types.users.UserFull",
+            "full_user": {
+                "_": "types.UserFull",
+                "id": 1892042652,
+                "settings": {
+                    "_": "types.PeerSettings",
+                    "report_spam": false,
+                    "add_contact": false,
+                    "block_contact": false,
+                    "share_contact": false,
+                    "need_contacts_exception": false,
+                    "report_geo": false,
+                    "autoarchived": false,
+                    "invite_members": false,
+                    "request_chat_broadcast": false
+                },
+                "notify_settings": {
+                    "_": "types.PeerNotifySettings",
+                    "show_previews": true,
+                    "silent": false,
+                    "mute_until": 0,
+                    "ios_sound": {
+                        "_": "types.NotificationSoundDefault"
+                    },
+                    "android_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    },
+                    "other_sound": {
+                        "_": "types.NotificationSoundLocal",
+                        "title": "default",
+                        "data": "default"
+                    }
+                },
+                "common_chats_count": 0,
+                "blocked": false,
+                "phone_calls_available": false,
+                "phone_calls_private": false,
+                "can_pin_message": true,
+                "has_scheduled": false,
+                "video_calls_available": false,
+                "voice_messages_forbidden": false,
+                "translations_disabled": false,
+                "about": "https://t.me/southsparkvse",
+                "profile_photo": {
+                    "_": "types.Photo",
+                    "id": 5386813902257511896,
+                    "access_hash": -7705848892048508858,
+                    "file_reference": "b'\\x00f\\xe0\\x92\\xfe\\x8evO4\\xc6*\\xea\\x18\\x15,\\x12\\xa7\\x04\\x14\\x1c\\x85'",
+                    "date": 1725429823,
+                    "sizes": [
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "a",
+                            "w": 160,
+                            "h": 160,
+                            "size": 13315
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "b",
+                            "w": 320,
+                            "h": 320,
+                            "size": 38312
+                        },
+                        {
+                            "_": "types.PhotoSize",
+                            "type": "c",
+                            "w": 640,
+                            "h": 640,
+                            "size": 118692
+                        },
+                        {
+                            "_": "types.PhotoStrippedSize",
+                            "type": "i",
+                            "bytes": "b'\\x01((\\xcb\\xb6\\xb7{\\x99B\\'\\xe2Oj\\xd7\\xb7\\xb7\\xb3\\x8a\\x7f!\\x00\\x96p2\\xc4\\xf4\\x15\\x141\\x1b{\\x00P\\x0f5\\xc6\\xe1\\xbb\\xbf\\xb0\\xa3*\\xb1\\xfe\\xf9L7\\xb2\\xf0\\xac\\x01\\x1e\\xc3\\xe9\\xe9@\\r\\xb8\\xbfx\\xee\\x1a\\x1f\\xb3\\xc7\\xf2\\x9cp:\\xd2*\\xdb\\xde\\'\\xcd\\x13D\\xfc\\x8d\\xd8\\xc0\\'\\xd3\\xd2\\x90\\xa3i\\xf3\\x95\\x95\\x8bK(\\x18\\x94\\x1f\\xbb\\xce\\x0f^\\xf8\\xa9\\xb5\\x03*\\xd8\\xf1\\x1bD\\x9b\\x80*\\xef\\x93\\xc7\\x7fj\\x00\\xcb\\xb8\\x81\\xa0\\x93kr;\\x11\\xde\\x8a\\xb9\\xb8\\xdeX\\x1c\\x8c\\xbc}N?S\\xf5\\xfe\\x94P\\x05\\xb3o\\x1d\\xc1\\x88\\xbc\\xbeX\\x8cd\\x1f\\xca\\x98%\\xdc\\xc6}F/\\x90q\\x1b\\x05\\xe2\\x92\\xdc&\\xa1\\xa7\\x88X\\x9d\\xf1\\x1c\\x8cu\\xc5Iw\"\\xc3\\nA\\xb1d\\x89S(\\xcf\\x93\\x92;q@\\x14/-fXR\\xe2I\\xbc\\xc5s\\xc1$\\x9c\\x03\\xcd]\\x92\\xda\\xe1\\xe0h$\\xb8G\\x1e^\\xf5m\\xb9\\xc8\\x07\\xa6j\\xbc\\xd2\\xcb=\\xb6\\xc0\\xa4\\xc4#\\x07\\n\\xb8\\x08\\xc3\\xff\\x00\\xd5\\xfa\\xd4\\x10\\xdeH \\x10\\x00Y\\xb0U>\\x87\\xa8\\xfeT\\x01cH\\xff\\x00Sw\\x9f\\xbb\\xb0\\x7fZ)\\xf2m\\xb1\\xd2\\xfc\\xa0\\xc0\\xcb)\\xcbc\\xb7\\xf9\\xff\\x00\\x1a(\\x036\\t\\xde\\xde@\\xf1\\x9c\\x11Z\\xf1_\\xdbNC\\xba\\x84\\x98w\\xc7\\x14Q@\\x16\\x1e\\xe84EKG\\xb4\\x8c\\x1f\\xa7\\xe7Y\\xfee\\x9d\\x98o+\\xf7\\xaf\\xd05\\x14P\\x05\\t\\xe6y\\xe4.\\xe7\\'\\xf9QE\\x14\\x01'"
+                        }
+                    ],
+                    "dc_id": 2,
+                    "has_stickers": false,
+                    "video_sizes": []
+                },
+                "premium_gifts": []
+            },
+            "chats": [],
+            "users": [
+                {
+                    "_": "types.User",
+                    "id": 1892042652,
+                    "is_self": true,
+                    "contact": true,
+                    "mutual_contact": true,
+                    "deleted": false,
+                    "bot": false,
+                    "bot_chat_history": false,
+                    "bot_nochats": false,
+                    "verified": false,
+                    "restricted": false,
+                    "min": false,
+                    "bot_inline_geo": false,
+                    "support": false,
+                    "scam": false,
+                    "apply_min_photo": false,
+                    "fake": false,
+                    "bot_attach_menu": false,
+                    "premium": false,
+                    "attach_menu_enabled": false,
+                    "bot_can_edit": false,
+                    "access_hash": -5051557823455168370,
+                    "first_name": "пролетарский",
+                    "last_name": "паразит",
+                    "username": "ganjabasmen",
+                    "phone": "79157460112",
+                    "photo": {
+                        "_": "types.UserProfilePhoto",
+                        "photo_id": 5386813902257511896,
+                        "dc_id": 2,
+                        "has_video": false,
+                        "personal": false,
+                        "stripped_thumb": "b'\\x01\\x08\\x08\\x89\\xc2yJA\\x1eI\\x18\\xcf`(\\xa2\\x8a\\x00'"
+                    },
+                    "status": {
+                        "_": "types.UserStatusOffline",
+                        "was_online": 1725993721
+                    },
+                    "restriction_reason": [],
+                    "usernames": []
+                }
+            ]
+        }
+    }
+}
+2024-09-10 21:42:06,643 - INFO - Started 12 HandlerTasks
+2024-09-10 21:42:08,311 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086615986408449,
+    "seq_no": 9,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1329387796,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994028
+            }
+        },
+        "date": 1725993727
+    }
+}
+2024-09-10 21:42:10,481 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086625306866689,
+    "seq_no": 11,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1767557625,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994030
+            }
+        },
+        "date": 1725993729
+    }
+}
+2024-09-10 21:42:10,843 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086626858772481,
+    "seq_no": 13,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 650720979,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993730
+            }
+        },
+        "date": 1725993729
+    }
+}
+2024-09-10 21:42:11,450 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086627746021376,
+    "seq_no": 7,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:11,532 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086629814827009,
+    "seq_no": 14,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086627746021376,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:14,774 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086643743052801,
+    "seq_no": 15,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1346425369,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993734
+            }
+        },
+        "date": 1725993733
+    }
+}
+2024-09-10 21:42:16,461 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086649220857856,
+    "seq_no": 9,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:16,542 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086651333073921,
+    "seq_no": 16,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086649220857856,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:21,472 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086670695694336,
+    "seq_no": 11,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:21,528 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086672750375937,
+    "seq_no": 17,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1892042652,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994041
+            }
+        },
+        "date": 1725993740
+    }
+}
+2024-09-10 21:42:21,575 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086672763354113,
+    "seq_no": 19,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 6592132232,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994041
+            }
+        },
+        "date": 1725993740
+    }
+}
+2024-09-10 21:42:21,576 - DEBUG - Sending 10 acks
+2024-09-10 21:42:21,576 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086670695694348,
+    "seq_no": 12,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413086608794836993,
+            7413086608389768193,
+            7413086607336090625,
+            7413086607749935105,
+            7413086615986408449,
+            7413086625306866689,
+            7413086626858772481,
+            7413086643743052801,
+            7413086672750375937,
+            7413086672763354113
+        ]
+    }
+}
+2024-09-10 21:42:21,576 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086672857908225,
+    "seq_no": 20,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086670695694336,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:21,576 - DEBUG - Sending 10 acks
+2024-09-10 21:42:21,576 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086670695694356,
+    "seq_no": 12,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413086608794836993,
+            7413086608389768193,
+            7413086607336090625,
+            7413086607749935105,
+            7413086615986408449,
+            7413086625306866689,
+            7413086626858772481,
+            7413086643743052801,
+            7413086672750375937,
+            7413086672763354113
+        ]
+    }
+}
+2024-09-10 21:42:22,712 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086677835722753,
+    "seq_no": 21,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1892042652,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993742
+            }
+        },
+        "date": 1725993741
+    }
+}
+2024-09-10 21:42:22,808 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086678247287809,
+    "seq_no": 23,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1443259523,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994042
+            }
+        },
+        "date": 1725993741
+    }
+}
+2024-09-10 21:42:22,899 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086678641166337,
+    "seq_no": 25,
+    "length": 36,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateChatUserTyping",
+            "chat_id": 4592970990,
+            "from_id": {
+                "_": "types.PeerUser",
+                "user_id": 706224888
+            },
+            "action": {
+                "_": "types.SendMessageTypingAction"
+            }
+        },
+        "date": 1725993741
+    }
+}
+2024-09-10 21:42:23,939 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086683103159297,
+    "seq_no": 27,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1767557625,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993743
+            }
+        },
+        "date": 1725993742
+    }
+}
+2024-09-10 21:42:26,245 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086693005199361,
+    "seq_no": 29,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1767557625,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994046
+            }
+        },
+        "date": 1725993745
+    }
+}
+2024-09-10 21:42:26,472 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086692170530820,
+    "seq_no": 13,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:26,552 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086694329545729,
+    "seq_no": 30,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086692170530820,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:28,117 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086701049581569,
+    "seq_no": 31,
+    "length": 128,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657225,
+        "from_id": 706224888,
+        "chat_id": 4592970990,
+        "message": "Ааа, это так возможно просто запускается",
+        "pts": 1395351,
+        "pts_count": 1,
+        "date": 1725993748,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "reply_to": {
+            "_": "types.MessageReplyHeader",
+            "reply_to_msg_id": 657223,
+            "reply_to_scheduled": false,
+            "forum_topic": false
+        },
+        "entities": []
+    }
+}
+2024-09-10 21:42:28,117 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086700760465412,
+    "seq_no": 15,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395350,
+        "date": 1725993748,
+        "qts": -1
+    }
+}
+2024-09-10 21:42:28,243 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086700760465420,
+    "seq_no": 17,
+    "length": 20,
+    "body": {
+        "_": "functions.messages.GetMessages",
+        "id": [
+            {
+                "_": "types.InputMessageReplyTo",
+                "id": 657225
+            }
+        ]
+    }
+}
+2024-09-10 21:42:28,290 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086701793652737,
+    "seq_no": 35,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1346425369,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994048
+            }
+        },
+        "date": 1725993747
+    }
+}
+2024-09-10 21:42:29,549 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086707199523841,
+    "seq_no": 39,
+    "length": 52,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657226,
+        "from_id": 706224888,
+        "chat_id": 4592970990,
+        "message": "Норм",
+        "pts": 1395352,
+        "pts_count": 1,
+        "date": 1725993749,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:42:29,549 - DEBUG - Sending 10 acks
+2024-09-10 21:42:29,549 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086705055432708,
+    "seq_no": 18,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413086678641166337,
+            7413086683103159297,
+            7413086677835722753,
+            7413086678247287809,
+            7413086693005199361,
+            7413086701049581569,
+            7413086701494290433,
+            7413086701793652737,
+            7413086702151349249,
+            7413086707199523841
+        ]
+    }
+}
+2024-09-10 21:42:29,550 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086705055432712,
+    "seq_no": 19,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395351,
+        "date": 1725993749,
+        "qts": -1
+    }
+}
+2024-09-10 21:42:31,481 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086713645367296,
+    "seq_no": 21,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:31,562 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086715846289409,
+    "seq_no": 42,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086713645367296,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:35,152 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086731264326657,
+    "seq_no": 43,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1767557625,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993755
+            }
+        },
+        "date": 1725993754
+    }
+}
+2024-09-10 21:42:36,490 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086735120203776,
+    "seq_no": 23,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:36,571 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086737357534209,
+    "seq_no": 44,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086735120203776,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:39,354 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086749311088641,
+    "seq_no": 45,
+    "length": 64,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657227,
+        "from_id": 839368961,
+        "chat_id": 4592970990,
+        "message": "Ну его нахуй",
+        "pts": 1395353,
+        "pts_count": 1,
+        "date": 1725993759,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "entities": []
+    }
+}
+2024-09-10 21:42:39,354 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086748005105668,
+    "seq_no": 25,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395352,
+        "date": 1725993759,
+        "qts": -1
+    }
+}
+2024-09-10 21:42:40,039 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086752252909569,
+    "seq_no": 49,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 6592132232,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993759
+            }
+        },
+        "date": 1725993758
+    }
+}
+2024-09-10 21:42:41,508 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086756595040256,
+    "seq_no": 27,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:41,588 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086758909192193,
+    "seq_no": 50,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086756595040256,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:44,762 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086772537609217,
+    "seq_no": 51,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1346425369,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993764
+            }
+        },
+        "date": 1725993763
+    }
+}
+2024-09-10 21:42:46,516 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086778069876736,
+    "seq_no": 29,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:46,612 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086780486259713,
+    "seq_no": 52,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086778069876736,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:50,670 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086797913829377,
+    "seq_no": 53,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5141447400,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993770
+            }
+        },
+        "date": 1725993769
+    }
+}
+2024-09-10 21:42:51,543 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086799544713220,
+    "seq_no": 31,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:51,625 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086802013094913,
+    "seq_no": 56,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086799544713220,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:53,118 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086808429035521,
+    "seq_no": 57,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1989779558,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994072
+            }
+        },
+        "date": 1725993772
+    }
+}
+2024-09-10 21:42:53,773 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086811239194625,
+    "seq_no": 59,
+    "length": 164,
+    "body": {
+        "_": "types.UpdateShortChatMessage",
+        "id": 657230,
+        "from_id": 706224888,
+        "chat_id": 4592970990,
+        "message": "На там в главном меню или в настройках есть вкладкады \"моды\"",
+        "pts": 1395356,
+        "pts_count": 1,
+        "date": 1725993773,
+        "out": false,
+        "mentioned": false,
+        "media_unread": false,
+        "silent": false,
+        "reply_to": {
+            "_": "types.MessageReplyHeader",
+            "reply_to_msg_id": 657224,
+            "reply_to_scheduled": false,
+            "forum_topic": false
+        },
+        "entities": []
+    }
+}
+2024-09-10 21:42:53,773 - DEBUG - Sending 10 acks
+2024-09-10 21:42:53,773 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086808134647816,
+    "seq_no": 32,
+    "length": 92,
+    "body": {
+        "_": "types.MsgsAck",
+        "msg_ids": [
+            7413086749311088641,
+            7413086749715004417,
+            7413086708247938049,
+            7413086731264326657,
+            7413086752252909569,
+            7413086772537609217,
+            7413086797913829377,
+            7413086799869631489,
+            7413086808429035521,
+            7413086811239194625
+        ]
+    }
+}
+2024-09-10 21:42:53,774 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086808134647820,
+    "seq_no": 33,
+    "length": 20,
+    "body": {
+        "_": "functions.updates.GetDifference",
+        "pts": 1395355,
+        "date": 1725993773,
+        "qts": -1
+    }
+}
+2024-09-10 21:42:54,005 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086812429615108,
+    "seq_no": 35,
+    "length": 20,
+    "body": {
+        "_": "functions.messages.GetMessages",
+        "id": [
+            {
+                "_": "types.InputMessageReplyTo",
+                "id": 657230
+            }
+        ]
+    }
+}
+2024-09-10 21:42:56,092 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086821204529153,
+    "seq_no": 65,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5222969519,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994076
+            }
+        },
+        "date": 1725993775
+    }
+}
+2024-09-10 21:42:56,557 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086821019549700,
+    "seq_no": 37,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:42:56,638 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086823547505665,
+    "seq_no": 66,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086821019549700,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:42:57,156 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086825770105857,
+    "seq_no": 67,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1767557625,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994076
+            }
+        },
+        "date": 1725993776
+    }
+}
+2024-09-10 21:43:01,486 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086844369468417,
+    "seq_no": 69,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 5926562997,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994081
+            }
+        },
+        "date": 1725993780
+    }
+}
+2024-09-10 21:43:01,578 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086842494386180,
+    "seq_no": 39,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:43:01,659 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086845112103937,
+    "seq_no": 70,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086842494386180,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:43:03,927 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086854855490561,
+    "seq_no": 71,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1989779558,
+            "status": {
+                "_": "types.UserStatusOffline",
+                "was_online": 1725993783
+            }
+        },
+        "date": 1725993782
+    }
+}
+2024-09-10 21:43:06,440 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086865636399105,
+    "seq_no": 75,
+    "length": 28,
+    "body": {
+        "_": "types.UpdateShort",
+        "update": {
+            "_": "types.UpdateUserStatus",
+            "user_id": 1527294436,
+            "status": {
+                "_": "types.UserStatusOnline",
+                "expires": 1725994086
+            }
+        },
+        "date": 1725993785
+    }
+}
+2024-09-10 21:43:06,597 - DEBUG - Sent: {
+    "_": "Message",
+    "msg_id": 7413086863969222660,
+    "seq_no": 41,
+    "length": 16,
+    "body": {
+        "_": "functions.PingDelayDisconnect",
+        "ping_id": 0,
+        "disconnect_delay": 25
+    }
+}
+2024-09-10 21:43:06,677 - DEBUG - Received: {
+    "_": "Message",
+    "msg_id": 7413086866662801409,
+    "seq_no": 76,
+    "length": 20,
+    "body": {
+        "_": "types.Pong",
+        "msg_id": 7413086863969222660,
+        "ping_id": 0
+    }
+}
+2024-09-10 21:50:16,558 - WARNING - Python-dotenv could not parse statement starting at line 5
+2024-09-10 21:50:54,913 - DEBUG - diff parser start
+2024-09-10 21:50:54,913 - DEBUG - line_lengths old: 137; new: 2
+2024-09-10 21:50:54,913 - DEBUG - -> code[delete] old[1:135] new[1:0]
+2024-09-10 21:50:54,913 - DEBUG - -> code[equal] old[136:137] new[1:2]
+2024-09-10 21:50:54,913 - DEBUG - parse_part from 1 to 2 (to 1 in part parser)
+2024-09-10 21:50:54,913 - DEBUG - diff parser end
+2024-09-10 21:50:55,603 - DEBUG - diff parser start
+2024-09-10 21:50:55,603 - DEBUG - line_lengths old: 2; new: 100
+2024-09-10 21:50:55,603 - DEBUG - -> code[insert] old[1:0] new[1:98]
+2024-09-10 21:50:55,618 - DEBUG - parse_part from 1 to 100 (to 99 in part parser)
+2024-09-10 21:50:55,618 - DEBUG - -> code[equal] old[1:2] new[99:100]
+2024-09-10 21:50:55,618 - DEBUG - diff parser end
+2024-09-10 21:53:08,879 - DEBUG - Using proactor: IocpProactor
+2024-09-10 21:53:08,894 - DEBUG - Using proactor: IocpProactor
+2024-09-10 21:53:08,894 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2024-09-10 21:53:08,894 - DEBUG - Connection attempt 1...
+2024-09-10 21:53:08,904 - DEBUG - Connection success!
+2024-09-10 21:53:08,904 - DEBUG - New auth_key attempt 1...
+2024-09-10 21:53:10,261 - DEBUG - auth_key generation success!
+2024-09-10 21:53:10,261 - DEBUG - Starting send loop
+2024-09-10 21:53:10,261 - DEBUG - Starting receive loop
+2024-09-10 21:53:10,261 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2024-09-10 21:53:10,277 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,277 - DEBUG - Assigned msg_id = 7413089459238689944 to InvokeWithLayerRequest (2814042ceb0)
+2024-09-10 21:53:10,277 - DEBUG - Encrypting 1 message(s) in 84 bytes for sending
+2024-09-10 21:53:10,277 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,277 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,277 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:10,365 - DEBUG - Handling bad salt for message 7413089459238689944
+2024-09-10 21:53:10,365 - DEBUG - 1 message(s) will be resent
+2024-09-10 21:53:10,365 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:10,365 - DEBUG - Assigned msg_id = 7413089459591314836 to InvokeWithLayerRequest (2814042ceb0)
+2024-09-10 21:53:10,365 - DEBUG - Encrypting 1 message(s) in 84 bytes for sending
+2024-09-10 21:53:10,365 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,365 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,365 - DEBUG - Assigned msg_id = 7413089459591314840 to MsgsAck (2814042cd30)
+2024-09-10 21:53:10,365 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:10,369 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,369 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,445 - DEBUG - Handling container
+2024-09-10 21:53:10,445 - DEBUG - Handling new session created
+2024-09-10 21:53:10,445 - DEBUG - Handling acknowledge for [7413089459591314836]
+2024-09-10 21:53:10,445 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:10,493 - DEBUG - Handling RPC result for message 7413089459591314836
+2024-09-10 21:53:10,493 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:10,493 - DEBUG - Assigned msg_id = 7413089460102799936 to GetUsersRequest (2814042c670)
+2024-09-10 21:53:10,493 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:10,493 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,493 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,493 - DEBUG - Assigned msg_id = 7413089460102799940 to MsgsAck (2814042c790)
+2024-09-10 21:53:10,493 - DEBUG - Encrypting 1 message(s) in 60 bytes for sending
+2024-09-10 21:53:10,499 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,499 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,607 - DEBUG - Handling RPC result for message 7413089460102799936
+2024-09-10 21:53:10,607 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:10,607 - DEBUG - Assigned msg_id = 7413089460557941956 to MsgsAck (2814042c3a0)
+2024-09-10 21:53:10,607 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:10,607 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,607 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,607 - DEBUG - Assigned msg_id = 7413089460557941960 to MsgsAck (2814042c2b0)
+2024-09-10 21:53:10,607 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:10,610 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,610 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,611 - DEBUG - Assigned msg_id = 7413089460573550744 to GetUsersRequest (2814042ccd0)
+2024-09-10 21:53:10,611 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:10,611 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,612 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,724 - DEBUG - Handling RPC result for message 7413089460573550744
+2024-09-10 21:53:10,724 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:10,724 - DEBUG - Assigned msg_id = 7413089461028708980 to MsgsAck (2814042c190)
+2024-09-10 21:53:10,724 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:10,724 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,724 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,724 - DEBUG - Assigned msg_id = 7413089461028708984 to MsgsAck (2814042c0d0)
+2024-09-10 21:53:10,724 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:10,728 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,728 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,728 - DEBUG - Assigned msg_id = 7413089461043682620 to SendCodeRequest (2814042c430)
+2024-09-10 21:53:10,729 - DEBUG - Encrypting 1 message(s) in 80 bytes for sending
+2024-09-10 21:53:10,730 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:10,730 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:10,923 - DEBUG - Handling RPC result for message 7413089461043682620
+2024-09-10 21:53:10,923 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,022 - DEBUG - Assigned msg_id = 7413089509760496208 to GetUsersRequest (2814042c2e0)
+2024-09-10 21:53:22,023 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:22,023 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,024 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,024 - DEBUG - Assigned msg_id = 7413089509768463204 to MsgsAck (2814042c5e0)
+2024-09-10 21:53:22,024 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,025 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,026 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,126 - DEBUG - Handling RPC result for message 7413089509760496208
+2024-09-10 21:53:22,126 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,127 - DEBUG - Assigned msg_id = 7413089510178138804 to MsgsAck (2814042c400)
+2024-09-10 21:53:22,127 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,127 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,128 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,128 - DEBUG - Assigned msg_id = 7413089510182137560 to MsgsAck (2814038df90)
+2024-09-10 21:53:22,128 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,129 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,129 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,129 - DEBUG - Assigned msg_id = 7413089510187968324 to SignInRequest (2814042c400)
+2024-09-10 21:53:22,130 - DEBUG - Encrypting 1 message(s) in 64 bytes for sending
+2024-09-10 21:53:22,131 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,131 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,255 - DEBUG - Handling RPC result for message 7413089510187968324
+2024-09-10 21:53:22,255 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,258 - DEBUG - Assigned msg_id = 7413089510703657220 to GetStateRequest (2814042c190)
+2024-09-10 21:53:22,259 - DEBUG - Encrypting 1 message(s) in 20 bytes for sending
+2024-09-10 21:53:22,259 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,260 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,260 - DEBUG - Assigned msg_id = 7413089510709181856 to MsgsAck (2814038e8f0)
+2024-09-10 21:53:22,260 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,261 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,261 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,339 - DEBUG - Handling RPC result for message 7413089510703657220
+2024-09-10 21:53:22,340 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,340 - INFO - Клиент запущен.
+2024-09-10 21:53:22,341 - DEBUG - Assigned msg_id = 7413089511033918452 to ResolveUsernameRequest (2814038e950)
+2024-09-10 21:53:22,341 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:22,342 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,342 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,342 - DEBUG - Assigned msg_id = 7413089511037916252 to MsgsAck (2814038dd80)
+2024-09-10 21:53:22,342 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,344 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,344 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,433 - DEBUG - Handling RPC result for message 7413089511033918452
+2024-09-10 21:53:22,433 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,433 - DEBUG - Assigned msg_id = 7413089511402555536 to GetHistoryRequest (2814038e800)
+2024-09-10 21:53:22,434 - DEBUG - Encrypting 1 message(s) in 72 bytes for sending
+2024-09-10 21:53:22,435 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,435 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,435 - DEBUG - Assigned msg_id = 7413089511410933564 to MsgsAck (2814038eec0)
+2024-09-10 21:53:22,435 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,437 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,437 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,568 - DEBUG - Handling RPC result for message 7413089511402555536
+2024-09-10 21:53:22,570 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,571 - INFO - Получено сообщений: 27
+2024-09-10 21:53:22,571 - INFO - Выбрано видео ID: 2
+2024-09-10 21:53:22,571 - INFO - Текст сообщения: 26 сезон 3 серия: Японские туалеты
+#26сезон
+2024-09-10 21:53:22,572 - DEBUG - Assigned msg_id = 7413089511957140040 to DeleteMessagesRequest (2814038ee30)
+2024-09-10 21:53:22,572 - DEBUG - Encrypting 1 message(s) in 52 bytes for sending
+2024-09-10 21:53:22,573 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,573 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,573 - DEBUG - Assigned msg_id = 7413089511961136888 to MsgsAck (2814038ebc0)
+2024-09-10 21:53:22,573 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,574 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,574 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,659 - DEBUG - Handling RPC result for message 7413089511957140040
+2024-09-10 21:53:22,659 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,660 - INFO - Предыдущее сообщение с ID 707 удалено.
+2024-09-10 21:53:22,661 - DEBUG - Assigned msg_id = 7413089512313949656 to SendMediaRequest (281403f9300)
+2024-09-10 21:53:22,661 - DEBUG - Encrypting 1 message(s) in 332 bytes for sending
+2024-09-10 21:53:22,663 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,664 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,664 - DEBUG - Assigned msg_id = 7413089512325930664 to MsgsAck (2814038dbd0)
+2024-09-10 21:53:22,664 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,665 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,665 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,811 - DEBUG - Handling RPC result for message 7413089512313949656
+2024-09-10 21:53:22,812 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,812 - INFO - Сообщение с видео и текстом переслано в @bottest2313.
+2024-09-10 21:53:22,816 - INFO - ID отправленного сообщения 28 сохранен в .env для первого канала.
+2024-09-10 21:53:22,817 - DEBUG - Assigned msg_id = 7413089512939918588 to ResolveUsernameRequest (2814042c400)
+2024-09-10 21:53:22,817 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,818 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,818 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,818 - DEBUG - Assigned msg_id = 7413089512944327424 to MsgsAck (281403cb6d0)
+2024-09-10 21:53:22,818 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,820 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,820 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,912 - DEBUG - Handling RPC result for message 7413089512939918588
+2024-09-10 21:53:22,913 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:22,913 - DEBUG - Assigned msg_id = 7413089513323205064 to DeleteMessagesRequest (2814038e800)
+2024-09-10 21:53:22,914 - DEBUG - Encrypting 1 message(s) in 52 bytes for sending
+2024-09-10 21:53:22,915 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,915 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:22,915 - DEBUG - Assigned msg_id = 7413089513331598352 to MsgsAck (281403f9e40)
+2024-09-10 21:53:22,915 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:22,917 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:22,917 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,002 - DEBUG - Handling RPC result for message 7413089513323205064
+2024-09-10 21:53:23,002 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:23,003 - INFO - Предыдущее сообщение с ID 2681 удалено.
+2024-09-10 21:53:23,003 - DEBUG - Assigned msg_id = 7413089513979815200 to SendMediaRequest (281403f9570)
+2024-09-10 21:53:23,003 - DEBUG - Encrypting 1 message(s) in 380 bytes for sending
+2024-09-10 21:53:23,006 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:23,006 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,007 - DEBUG - Assigned msg_id = 7413089513995801640 to MsgsAck (281403fa080)
+2024-09-10 21:53:23,007 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:23,009 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:23,009 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,159 - DEBUG - Handling RPC result for message 7413089513979815200
+2024-09-10 21:53:23,160 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:23,161 - INFO - Сообщение с видео и текстом переслано в топик 2637 супергруппы @testbotsouth.
+2024-09-10 21:53:23,165 - INFO - ID отправленного сообщения 42 сохранен в .env для второго канала.
+2024-09-10 21:53:23,165 - DEBUG - Assigned msg_id = 7413089514627254200 to GetStateRequest (2814042cf10)
+2024-09-10 21:53:23,166 - DEBUG - Encrypting 1 message(s) in 20 bytes for sending
+2024-09-10 21:53:23,166 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:23,167 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,167 - DEBUG - Assigned msg_id = 7413089514633470252 to MsgsAck (2814038e5c0)
+2024-09-10 21:53:23,167 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:23,168 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:23,169 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,251 - DEBUG - Handling RPC result for message 7413089514627254200
+2024-09-10 21:53:23,251 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:23,297 - DEBUG - Handling gzipped data
+2024-09-10 21:53:23,298 - DEBUG - Handling update Updates
+2024-09-10 21:53:23,298 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:23,339 - DEBUG - Timeout waiting for updates expired
+2024-09-10 21:53:23,340 - DEBUG - Getting difference for channel 2355652620 updates
+2024-09-10 21:53:23,340 - DEBUG - Assigned msg_id = 7413089515325520232 to GetChannelDifferenceRequest (281403f9ae0)
+2024-09-10 21:53:23,340 - DEBUG - Encrypting 1 message(s) in 56 bytes for sending
+2024-09-10 21:53:23,341 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:23,341 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,342 - DEBUG - Assigned msg_id = 7413089515333904936 to MsgsAck (281403f9840)
+2024-09-10 21:53:23,342 - DEBUG - Encrypting 1 message(s) in 44 bytes for sending
+2024-09-10 21:53:23,343 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:23,343 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:23,437 - DEBUG - Handling RPC result for message 7413089515325520232
+2024-09-10 21:53:23,438 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:23,438 - INFO - Got difference for channel 2355652620 updates
+2024-09-10 21:53:26,720 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:26,720 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:29,337 - DEBUG - Handling update Updates
+2024-09-10 21:53:29,338 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:32,230 - DEBUG - Handling update Updates
+2024-09-10 21:53:32,230 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:32,230 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:32,231 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:33,923 - DEBUG - Handling update Updates
+2024-09-10 21:53:33,924 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:33,924 - DEBUG - Getting difference for account updates
+2024-09-10 21:53:33,924 - DEBUG - Assigned msg_id = 7413089560610393500 to GetDifferenceRequest (2814042c9d0)
+2024-09-10 21:53:33,924 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:33,925 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:33,926 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:33,926 - DEBUG - Assigned msg_id = 7413089560618342376 to MsgsAck (281403f8df0)
+2024-09-10 21:53:33,926 - DEBUG - Encrypting 1 message(s) in 76 bytes for sending
+2024-09-10 21:53:33,927 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:33,927 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:33,929 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:33,929 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:34,042 - DEBUG - Handling RPC result for message 7413089560610393500
+2024-09-10 21:53:34,042 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:34,042 - INFO - Got difference for account updates
+2024-09-10 21:53:36,872 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:36,872 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:38,897 - DEBUG - Handling update Updates
+2024-09-10 21:53:38,897 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:38,898 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:38,898 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:46,848 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:46,848 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:46,859 - DEBUG - Handling update Updates
+2024-09-10 21:53:46,859 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:46,910 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:46,910 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:52,616 - DEBUG - Using proactor: IocpProactor
+2024-09-10 21:53:52,632 - DEBUG - Using proactor: IocpProactor
+2024-09-10 21:53:52,633 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2024-09-10 21:53:52,633 - DEBUG - Connection attempt 1...
+2024-09-10 21:53:52,634 - DEBUG - Connection success!
+2024-09-10 21:53:52,635 - DEBUG - Starting send loop
+2024-09-10 21:53:52,635 - DEBUG - Starting receive loop
+2024-09-10 21:53:52,635 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2024-09-10 21:53:52,655 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:52,656 - DEBUG - Assigned msg_id = 7413089641145059484 to InvokeWithLayerRequest (1e9c412cfd0)
+2024-09-10 21:53:52,656 - DEBUG - Encrypting 1 message(s) in 84 bytes for sending
+2024-09-10 21:53:52,657 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:52,657 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:52,657 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:52,781 - DEBUG - Handling bad salt for message 7413089641145059484
+2024-09-10 21:53:52,781 - DEBUG - 1 message(s) will be resent
+2024-09-10 21:53:52,782 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:52,782 - DEBUG - Assigned msg_id = 7413089641646769424 to InvokeWithLayerRequest (1e9c412cfd0)
+2024-09-10 21:53:52,782 - DEBUG - Encrypting 1 message(s) in 84 bytes for sending
+2024-09-10 21:53:52,783 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:52,783 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:52,784 - DEBUG - Assigned msg_id = 7413089641654761216 to MsgsAck (1e9c412d0c0)
+2024-09-10 21:53:52,784 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:52,785 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:52,785 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:52,858 - DEBUG - Handling container
+2024-09-10 21:53:52,859 - DEBUG - Handling new session created
+2024-09-10 21:53:52,859 - DEBUG - Handling acknowledge for [7413089641646769424]
+2024-09-10 21:53:52,859 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:52,998 - DEBUG - Handling RPC result for message 7413089641646769424
+2024-09-10 21:53:52,999 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:52,999 - DEBUG - Assigned msg_id = 7413089642515871900 to GetUsersRequest (1e9c412c790)
+2024-09-10 21:53:53,000 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:53,000 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,001 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,001 - DEBUG - Assigned msg_id = 7413089642818834804 to MsgsAck (1e9c412cbe0)
+2024-09-10 21:53:53,001 - DEBUG - Encrypting 1 message(s) in 60 bytes for sending
+2024-09-10 21:53:53,002 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,002 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,203 - DEBUG - Handling RPC result for message 7413089642515871900
+2024-09-10 21:53:53,203 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:53,206 - DEBUG - Assigned msg_id = 7413089643638411068 to GetStateRequest (1e9c412c790)
+2024-09-10 21:53:53,206 - DEBUG - Encrypting 1 message(s) in 20 bytes for sending
+2024-09-10 21:53:53,207 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,207 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,207 - DEBUG - Assigned msg_id = 7413089643642419360 to MsgsAck (1e9c412c3d0)
+2024-09-10 21:53:53,207 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:53,208 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,208 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,347 - DEBUG - Handling RPC result for message 7413089643638411068
+2024-09-10 21:53:53,347 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:53,348 - DEBUG - Assigned msg_id = 7413089644205088160 to GetUsersRequest (1e9c412c670)
+2024-09-10 21:53:53,348 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:53,349 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,349 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,349 - DEBUG - Assigned msg_id = 7413089644209085008 to MsgsAck (1e9c412c280)
+2024-09-10 21:53:53,349 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:53,350 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,350 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,498 - DEBUG - Handling RPC result for message 7413089644205088160
+2024-09-10 21:53:53,498 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:53,498 - INFO - Клиент запущен.
+2024-09-10 21:53:53,499 - DEBUG - Assigned msg_id = 7413089644809294244 to ResolveUsernameRequest (1e9c412cbb0)
+2024-09-10 21:53:53,499 - DEBUG - Encrypting 1 message(s) in 32 bytes for sending
+2024-09-10 21:53:53,500 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,500 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,500 - DEBUG - Assigned msg_id = 7413089644813289188 to MsgsAck (1e9c412c160)
+2024-09-10 21:53:53,500 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:53,501 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,501 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,674 - DEBUG - Handling RPC result for message 7413089644809294244
+2024-09-10 21:53:53,675 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:53,675 - DEBUG - Assigned msg_id = 7413089645513379596 to GetHistoryRequest (1e9c412c130)
+2024-09-10 21:53:53,676 - DEBUG - Encrypting 1 message(s) in 72 bytes for sending
+2024-09-10 21:53:53,677 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,677 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,677 - DEBUG - Assigned msg_id = 7413089645521378060 to MsgsAck (1e9c412c190)
+2024-09-10 21:53:53,678 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:53,679 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,679 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,873 - DEBUG - Handling RPC result for message 7413089645513379596
+2024-09-10 21:53:53,875 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:53,876 - INFO - Получено сообщений: 28
+2024-09-10 21:53:53,876 - INFO - Выбрано видео ID: 23
+2024-09-10 21:53:53,876 - INFO - Текст сообщения: 26 сезон 3 серия: Японские туалеты
+#26сезон
+
+Случайная серия на сегодня
+
+[Наш другой канал с фильмами и сериалами](https://t.me/apelsinovypodval)
+2024-09-10 21:53:53,877 - DEBUG - Assigned msg_id = 7413089646322276612 to DeleteMessagesRequest (1e9c412c610)
+2024-09-10 21:53:53,877 - DEBUG - Encrypting 1 message(s) in 52 bytes for sending
+2024-09-10 21:53:53,878 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,878 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,878 - DEBUG - Assigned msg_id = 7413089646326274416 to MsgsAck (1e9c412c8b0)
+2024-09-10 21:53:53,878 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:53,879 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:53,879 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:53,953 - DEBUG - Handling container
+2024-09-10 21:53:53,954 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:53,954 - DEBUG - Handling acknowledge for [7413089646322276612]
+2024-09-10 21:53:53,954 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,008 - DEBUG - Handling RPC result for message 7413089646322276612
+2024-09-10 21:53:54,008 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,009 - INFO - Предыдущее сообщение с ID 28 удалено.
+2024-09-10 21:53:54,010 - DEBUG - Assigned msg_id = 7413089647151741172 to SendMediaRequest (1e9c40f91b0)
+2024-09-10 21:53:54,010 - DEBUG - Encrypting 1 message(s) in 504 bytes for sending
+2024-09-10 21:53:54,016 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,017 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,017 - DEBUG - Assigned msg_id = 7413089647177377844 to MsgsAck (1e9c40f95d0)
+2024-09-10 21:53:54,017 - DEBUG - Encrypting 1 message(s) in 60 bytes for sending
+2024-09-10 21:53:54,018 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,019 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,209 - DEBUG - Handling RPC result for message 7413089647151741172
+2024-09-10 21:53:54,210 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,211 - INFO - Сообщение с видео и текстом переслано в @bottest2313.
+2024-09-10 21:53:54,217 - INFO - ID отправленного сообщения 29 сохранен в .env для первого канала.
+2024-09-10 21:53:54,217 - DEBUG - Assigned msg_id = 7413089647976920272 to ResolveUsernameRequest (1e9c412c4f0)
+2024-09-10 21:53:54,217 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:54,218 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,218 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,219 - DEBUG - Assigned msg_id = 7413089647984913968 to MsgsAck (1e9c412c5e0)
+2024-09-10 21:53:54,219 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:54,220 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,220 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,321 - DEBUG - Handling RPC result for message 7413089647976920272
+2024-09-10 21:53:54,321 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,321 - DEBUG - Assigned msg_id = 7413089648393512868 to DeleteMessagesRequest (1e9c412c130)
+2024-09-10 21:53:54,321 - DEBUG - Encrypting 1 message(s) in 52 bytes for sending
+2024-09-10 21:53:54,324 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,325 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,325 - DEBUG - Assigned msg_id = 7413089648411104344 to MsgsAck (1e9c40fa380)
+2024-09-10 21:53:54,325 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:54,327 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,327 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,412 - DEBUG - Handling RPC result for message 7413089648393512868
+2024-09-10 21:53:54,413 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,413 - INFO - Предыдущее сообщение с ID 42 удалено.
+2024-09-10 21:53:54,414 - DEBUG - Assigned msg_id = 7413089648764287136 to SendMediaRequest (1e9c40f9f30)
+2024-09-10 21:53:54,414 - DEBUG - Encrypting 1 message(s) in 360 bytes for sending
+2024-09-10 21:53:54,417 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,417 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,417 - DEBUG - Assigned msg_id = 7413089648779319904 to MsgsAck (1e9c40f9e40)
+2024-09-10 21:53:54,417 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:54,419 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,419 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,538 - DEBUG - Handling RPC result for message 7413089648764287136
+2024-09-10 21:53:54,539 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,539 - INFO - Сообщение с видео и текстом переслано в топик 2637 супергруппы @testbotsouth.
+2024-09-10 21:53:54,543 - INFO - ID отправленного сообщения 44 сохранен в .env для второго канала.
+2024-09-10 21:53:54,544 - DEBUG - Assigned msg_id = 7413089649287285948 to GetStateRequest (1e9c412cb50)
+2024-09-10 21:53:54,544 - DEBUG - Encrypting 1 message(s) in 20 bytes for sending
+2024-09-10 21:53:54,545 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,545 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,545 - DEBUG - Assigned msg_id = 7413089649291282796 to MsgsAck (1e9c408dd50)
+2024-09-10 21:53:54,545 - DEBUG - Encrypting 1 message(s) in 36 bytes for sending
+2024-09-10 21:53:54,546 - DEBUG - Encrypted messages put in a queue to be sent
+2024-09-10 21:53:54,547 - DEBUG - Waiting for messages to send...
+2024-09-10 21:53:54,626 - DEBUG - Handling RPC result for message 7413089649287285948
+2024-09-10 21:53:54,627 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:54,700 - DEBUG - Handling gzipped data
+2024-09-10 21:53:54,700 - DEBUG - Handling update Updates
+2024-09-10 21:53:54,701 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:55,085 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:55,086 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:55,478 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:55,478 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:56,146 - DEBUG - Handling update Updates
+2024-09-10 21:53:56,147 - DEBUG - Receiving items from the network...
+2024-09-10 21:53:57,793 - DEBUG - Handling update UpdateShort
+2024-09-10 21:53:57,793 - DEBUG - Receiving items from the network...
